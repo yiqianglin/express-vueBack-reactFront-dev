@@ -72,6 +72,7 @@
     "no-mixed-operators": [
       "warn"
     ],
+    "linebreak-style": ["warn", "unix"],
     // allow debugger during development
     "no-debugger": 0
   }
