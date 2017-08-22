@@ -15,6 +15,10 @@ export const urlProtoMap = {
     url: '/game-web-site/game/system/systemConfig.htm',
     proto: 'com.xunleijr.game.vo.SystemConfigResult'
   },
+  Index: {
+    url: '/game-web-site/game/system/index.htm',
+    proto: 'com.xunleijr.game.vo.IndexResult'
+  },
   UserSignin: {
     url: '/game-web-site/game/user/userSignin.htm',
     proto: 'com.xunleijr.game.vo.UserSigninResult'
@@ -30,6 +34,10 @@ export const urlProtoMap = {
   ScoreLoggerList: {
     url: '/game-web-site/game/user/scoreLogger.htm',
     proto: 'com.xunleijr.game.vo.ScoreLoggerListResult'
+  },
+  UserInfoWZRY: {
+    url: '/game-web-site/game/user/userInfoWZRY.htm',
+    proto: 'com.xunleijr.game.vo.UserInfoWZRYResult'
   },
   WxRechargeScore: {
     url: '/game-web-site/game/weixin/wxRechargeScore.htm',
@@ -57,7 +65,7 @@ export const urlProtoMap = {
   },
   UpdownUserGuessRecord: {
     url: '/game-web-updown/game/updown/getUserGuessRecord.htm',
-    proto: 'com.xunleijr.game.vo.UpdownUserGuessRecordResult'
+    proto: 'com.xunleijr.game.vo.updown.UpdownUserGuessRecordResult'
   },
   Guess: {
     url: '/game-web-updown/game/updown/guess.htm',
@@ -107,13 +115,13 @@ export const urlProtoMap = {
     url: '/game-web-updown/game/updown/getPlayTypeOptions.htm',
     proto: 'com.xunleijr.game.vo.updown.GetPlayTypeOptionsResult'
   },
+  MobileLogin: {
+    url: '/game-web-site/game/user/login.htm',
+    proto: 'com.xunleijr.game.vo.MobileLoginResult'
+  },
   UpDownHistoryChart: {
     url: '/game-web-updown/game/updown/getUpDownHistoryChart.htm',
     proto: 'com.xunleijr.game.vo.updown.UpDownHistoryChartResult'
-  },
-  MallRecommendProductList: {
-    url: '/game-web-mall/game/mall/recommendProductList.htm',
-    proto: 'com.xunleijr.game.vo.MallRecommendProductListResult'
   },
   SmashEggCurrentRoundInfo: {
     url: '/game-web-smashegg/game/smashegg/getCurrentRoundInfo.htm',
@@ -130,6 +138,18 @@ export const urlProtoMap = {
   SmashEggWinnersList: {
     url: '/game-web-smashegg/game/smashegg/winnersList.htm',
     proto: 'com.xunleijr.game.vo.smashegg.SmashEggWinnersListResult'
+  },
+  SmashTaskNotice: {
+    url: '/game-web-smashegg/game/smashegg/getTaskNotice.htm',
+    proto: 'com.xunleijr.game.vo.TaskNoticeResult'
+  },
+  SmashAcceptPrize: {
+    url: '/game-web-smashegg/game/smashegg/acceptPrize.htm',
+    proto: 'com.xunleijr.game.vo.AcceptPrizeResult'
+  },
+  SmashTaskList: {
+    url: '/game-web-smashegg/game/smashegg/getTaskList.htm',
+    proto: 'com.xunleijr.game.vo.TaskListResult'
   },
   GameExtraInfo: {
     url: '/game-web-smashegg/game/smashegg/getGameExtraInfo.htm',
@@ -158,6 +178,18 @@ export const urlProtoMap = {
   ShootAcceptPrize: {
     url: '/game-web-hitme/game/hitme/acceptPrize.htm',
     proto: 'com.xunleijr.game.vo.AcceptPrizeResult'
+  },
+  BuyViewProbChance: {
+    url: '/game-web-hitme/game/hitme/buyViewProbChance.htm',
+    proto: 'com.xunleijr.game.vo.hitme.BuyViewProbChanceResult'
+  },
+  HitmeSystemProperties: {
+    url: '/game-web-hitme/game/hitme/getHitmeSystemProperties.htm',
+    proto: 'com.xunleijr.game.vo.hitme.HitmeSystemPropertiesResult'
+  },
+  GetProbability: {
+    url: '/game-web-hitme/game/hitme/getProbability.htm',
+    proto: 'com.xunleijr.game.vo.hitme.GetProbabilityResult'
   },
   MallBannerList: {
     url: '/game-web-mall/game/mall/bannerList.htm',
@@ -191,10 +223,6 @@ export const urlProtoMap = {
     url: '/game-web-mall/game/mall/mallExchangeRecord.htm',
     proto: 'com.xunleijr.game.vo.MallExchangeRecordListResult'
   },
-  UserInfoWZRY: {
-    url: '/game-web-site/game/user/userInfoWZRY.htm',
-    proto: 'com.xunleijr.game.vo.UserInfoWZRYResult'
-  },
   MallCompleteWzryOrder: {
     url: '/game-web-mall/game/mall/completeWzryOrder.htm',
     proto: 'com.xunleijr.game.vo.BasicResult'
@@ -203,9 +231,37 @@ export const urlProtoMap = {
     url: '/game-web-mall/game/mall/skinServerList.htm',
     proto: 'com.xunleijr.game.vo.MallProductSkinServerListResult'
   },
-  Index: {
-    url: '/game-web-site/game/system/index.htm',
-    proto: 'com.xunleijr.game.vo.IndexResult'
+  MallRecommendProductList: {
+    url: '/game-web-mall/game/mall/recommendProductList.htm',
+    proto: 'com.xunleijr.game.vo.MallRecommendProductListResult'
+  },
+  CatchBirdsCurrentRoundInfo: {
+    url: '/game-web-catchbirds/game/catchbirds/getCurrentRoundInfo.htm',
+    proto: 'com.xunleijr.game.vo.catchbirds.CatchBirdsCurrentRoundInfoResult'
+  },
+  CatchBirdsRewardConfig: {
+    url: '/game-web-catchbirds/game/catchbirds/rewardConfig.htm',
+    proto: 'com.xunleijr.game.vo.catchbirds.CatchBirdsRewardConfigResult'
+  },
+  CatchBirdsShoot: {
+    url: '/game-web-catchbirds/game/catchbirds/shoot.htm',
+    proto: 'com.xunleijr.game.vo.catchbirds.CatchBirdsShootResult'
+  },
+  CatchBirdsHistoryRecord: {
+    url: '/game-web-catchbirds/game/catchbirds/getHistoryRecordResult.htm',
+    proto: 'com.xunleijr.game.vo.catchbirds.CatchBirdsHistoryRecordResult'
+  },
+  CatchBirdsTaskNotice: {
+    url: '/game-web-catchbirds/game/catchbirds/getTaskNotice.htm',
+    proto: 'com.xunleijr.game.vo.TaskNoticeResult'
+  },
+  CatchBirdsAcceptPrize: {
+    url: '/game-web-catchbirds/game/catchbirds/acceptPrize.htm',
+    proto: 'com.xunleijr.game.vo.AcceptPrizeResult'
+  },
+  CatchBirdsTaskList: {
+    url: '/game-web-catchbirds/game/catchbirds/getTaskList.htm',
+    proto: 'com.xunleijr.game.vo.TaskListResult'
   }
 };
 

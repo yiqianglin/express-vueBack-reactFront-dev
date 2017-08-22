@@ -1,0 +1,18 @@
+syntax = "proto3";
+package com.xunleijr.game.vo.catchbirds;
+
+message CatchBirdsHistoryRecordResult {
+    string code = 1;
+    string msg = 2;
+    int32 pageIndex = 3;
+    repeated HistoryRecordInfo list = 4;
+}
+
+message HistoryRecordInfo {
+   string guessList = 1;
+   string resultList = 2;
+   string selectedList = 3;
+   string createTime = 4;
+   int32 guessScore = 5;
+   int32 rewardScore = 6;
+}

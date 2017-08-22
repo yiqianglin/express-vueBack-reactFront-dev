@@ -1,0 +1,10 @@
+syntax = "proto3";
+package com.xunleijr.game.vo.catchbirds ;
+message CatchBirdsShootResult{
+    string code = 1;
+    string msg = 2;
+    string resultList = 3;
+    string selectedList = 4;
+    string createTime = 5;
+    int32 rewardScore = 6;
+}

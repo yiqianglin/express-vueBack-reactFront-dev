@@ -321,7 +321,8 @@ class User extends BaseUserStore {
       let data = await request('MallExchangeRecordInfo', params);
       if (_ENV_ === 'DEV') {
         // 激活码已经发放
-        /*        data = {
+        /*
+          data = {
           code: '200',
           msg: '获取兑换记录详情成功',
           productId: 5,
@@ -343,10 +344,12 @@ class User extends BaseUserStore {
           createSource: 1,
           spendScore: 106250,
           couponType: 'xunlei'
-        };*/
+        };
+        */
         // 京东卡，卡密类型，已经发货
         // 实物，没填写收货信息
-        /*        data = {
+        /*
+          data = {
           code: '200',
           msg: '获取兑换记录详情成功',
           productId: 6,
@@ -368,9 +371,11 @@ class User extends BaseUserStore {
           createSource: 1,
           spendScore: 612500,
           couponType: ''
-        };*/
+        };
+        */
         // 实物，已经填写收货信息
-        /*        data = {
+        /*
+        data = {
           code: '200',
           msg: '获取兑换记录详情成功',
           productId: 6,
@@ -392,7 +397,8 @@ class User extends BaseUserStore {
           createSource: 1,
           spendScore: 612500,
           couponType: ''
-        };*/
+        };
+        */
         // 皮肤，没有填写个人游戏信息
         data = {
           code: '200',
@@ -625,6 +631,17 @@ class User extends BaseUserStore {
     if (signinStatus && _userStatus !== '1' && !this.isFinishSign) {
       this.togglePop('isShowSign', true);
     }
+  }
+  /**
+   * 手机登录后的回调
+   * @example
+   * signSuccess(score)
+   *
+   * @param {number} score
+   */
+  @action
+  callBackUserInfo() {
+    this.getUserInfo(systemStore.subServerTime);
   }
 }
 

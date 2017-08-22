@@ -78,6 +78,7 @@ class BaseSystemStore {
    */
   async getServerTime() {
     const data = await request('GetServerTime');
+    console.log(data);
     if (data.code === '200') {
       this.setSubServerTime(data.time);
     }

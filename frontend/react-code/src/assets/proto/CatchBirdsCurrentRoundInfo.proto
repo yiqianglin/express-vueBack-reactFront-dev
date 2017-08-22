@@ -1,0 +1,17 @@
+syntax = "proto3";
+package com.xunleijr.game.vo.catchbirds ;
+message CatchBirdsCurrentRoundInfoResult{
+    string code = 1;
+    string msg = 2;
+    int32 birdcageNum = 3;
+    int32 maxSelectNum = 4;
+    repeated LastRoundInfo lastRoundInfo = 5;
+}
+message LastRoundInfo {
+   string guessList = 1;
+   string resultList = 2;
+   string selectedList = 3;
+   string createTime = 4;
+   int32 guessScore = 5;
+   int32 rewardScore = 6;
+}

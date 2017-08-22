@@ -12,6 +12,6 @@ message PlayTypeInfoResult {
 
 message OptionInfo{
     int32 optionId = 1;
-    int32 optionValue = 2;
+    string optionValue = 2;
     int32 userBetAmount = 3;
 }

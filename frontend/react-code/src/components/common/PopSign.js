@@ -44,11 +44,11 @@ class PopSign extends Component {
                   (continuousNum >= 7 && item < 7)
                   ? <p className="score-text">已领取</p>
                   : item < 7
-                      ? <p className="score-text">
-                          欢乐豆
-                          <span className="score-num">x{scoreArr[index]}</span>
-                        </p>
-                      : <p className="score-text">随机欢乐豆</p>}
+                    ? <p className="score-text">
+                        欢乐豆
+                      <span className="score-num">x{scoreArr[index]}</span>
+                    </p>
+                    : <p className="score-text">随机欢乐豆</p>}
                 <div className="signed-mask" />
               </div>
             ))}

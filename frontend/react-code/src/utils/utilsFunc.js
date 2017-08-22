@@ -2,8 +2,155 @@
  * 工具函数集合
  */
 import axios from 'axios';
+import protobuf from 'protobufjs';
 import { urlProtoMap } from 'utils/utilsData';
 import district from 'utils/cityCodeData';
+import crypto from 'crypto';
+
+/**
+ * 生成sign值
+ * @example
+ * const sign = getSign('/weipan/xx.htm',params,'POST')
+ *
+ * @param {string} url ajax请求路径
+ * @param {Object} params ajax请求参数
+ * @param {string} method ajax请求方法
+ * @returns {string} 返回加密好的sign值
+ */
+export function getSign(url, params, method) {
+  const requestMethod = method ? method.toUpperCase() : 'POST';
+  let key = '5sMYSJD40Py5R1lH7Rq2Io34zHGYDIry';
+  if (_ENV_ === 'PROD' && location.hostname === 'www.weitrades.com') {
+    key = 'tyUdBYqG8ec8K30LpDIwAdJb36dIhzpKDW5SrNH3FWlERwaST6gYnQS0CoLVwqsx';
+  }
+  const paramStr = queryUtil.toQueryString(params, false);
+  const message = `${requestMethod}:${url.replace(/.*(\/game\/.*\.htm$)/, '$1')}:${paramStr}`;
+  return crypto
+    .createHmac('sha1', key)
+    .update(message)
+    .digest()
+    .toString('base64')
+    .replace(/(\+|\s)/g, '/');
+}
+
+/**
+ * 将buffer数据转换为json格式
+ * @example
+ * const json = bufferToJson(buf,'GetServerTime')
+ *
+ * @param {ArrayBuffer} buf buffer数据
+ * @param {string} protoType proto文件名
+ * @returns {Object}
+ */
+export function bufferToJson(buf, protoType) {
+  return protobuf
+    .loadProtoFile(`${contentPath}/proto/${protoType}.proto?st=${pt}`)
+    .build(`${urlProtoMap[protoType].proto}`)
+    .decode(buf);
+}
+
+/**
+ * ajax请求函数
+ * @example
+ * const data = await request('GetServerTime', params)
+ *
+ * @param {string} prototype protobuffer类型
+ * @param {Object} params ajax请求参数
+ * @param {string} method ajax请求方法
+ * @returns {Promise} 返回promise对象
+ */
+export function request(prototype, params, method, timeout = 60000) {
+  const requestUrl = `${urlProtoMap[prototype].url}`;
+  const reqParams = params;
+  let paramStr = '';
+  if (params) {
+    const sign = getSign(urlProtoMap[prototype].url, params, method);
+    reqParams.sign = sign;
+    paramStr = queryUtil.toQueryString(params, false);
+  }
+  return axios
+    .post(requestUrl, paramStr, {
+      responseType: 'arraybuffer',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+      },
+      timeout
+    })
+    .then((response) => {
+      const data = bufferToJson(response.data, prototype);
+      console.groupCollapsed(prototype);
+      console.table(data);
+      console.groupEnd();
+      if (data.code !== '200') {
+        const errorData = {
+          ...data,
+          url: urlProtoMap[prototype].url,
+          params: reqParams,
+          method: method || 'POST'
+        };
+        return errorData;
+      }
+      return data;
+    })
+    .catch((error) => {
+      const errorData = {
+        code: '-1',
+        msg: error.response ? error : error.message,
+        url: urlProtoMap[prototype].url,
+        params: reqParams,
+        method: method || 'POST'
+      };
+      console.groupCollapsed(prototype);
+      console.table(errorData);
+      console.groupEnd();
+      return errorData;
+    });
+}
+
+/**
+ * ajax表单请求函数
+ * @example
+ * const data = await requestForm('GetServerTime', params)
+ *
+ * @param {string} prototype protobuffer类型
+ * @param {Object} params ajax请求参数
+ * @param {string} method ajax请求方法
+ * @returns {Object} 返回promise对象
+ */
+export function requestForm(prototype, params, method) {
+  const requestUrl = `${urlProtoMap[prototype].url}`;
+  const reqParams = params;
+  if (params) {
+    const sign = getSign(urlProtoMap[prototype].url, params, method);
+    reqParams.sign = sign;
+  }
+  const form = new FormData();
+  for (const key in reqParams) {
+    if (Object.prototype.hasOwnProperty.call(reqParams, key)) {
+      form.append(key, params[key]);
+    }
+  }
+  return axios
+    .post(requestUrl, form, {
+      responseType: 'arraybuffer'
+    })
+    .then((response) => {
+      const data = bufferToJson(response.data, prototype);
+      if (data.code !== '200') {
+        return {
+          code: data.code,
+          msg: data.msg,
+          url: urlProtoMap[prototype].url,
+          params: reqParams,
+          method: method || 'POST'
+        };
+      }
+      console.groupCollapsed(prototype);
+      console.table(data);
+      console.groupEnd();
+      return data;
+    });
+}
 
 /**
  * 设置微信title
@@ -58,10 +205,7 @@ export function formatDate(date, fmt) {
   };
   let format = fmt;
   if (/(y+)/.test(format)) {
-    format = format.replace(
-      RegExp.$1,
-      `${date.getFullYear()}`.substr(4 - RegExp.$1.length)
-    );
+    format = format.replace(RegExp.$1, `${date.getFullYear()}`.substr(4 - RegExp.$1.length));
   }
   for (const k in o) {
     if (new RegExp(`(${k})`).test(format)) {
@@ -185,7 +329,7 @@ export function formatMoney(t, type) {
   if (/^[0-9]\./.test(s)) return '0';
   if (s == null || s === '') return '0';
   s = s.toString().replace(/^(\d*)$/, '$1.');
-  s = (`${s}00`).replace(/(\d*\.\d\d)\d*/, '$1');
+  s = `${s}00`.replace(/(\d*\.\d\d)\d*/, '$1');
   s = s.replace('.', ',');
   const re = /(\d)(\d{3},)/;
   while (re.test(s)) {
@@ -200,4 +344,11 @@ export function formatMoney(t, type) {
     }
   }
   return s;
+}
+
+/**
+ * 判断是不是微信浏览器
+ */
+export function isWeixinBrowser() {
+  return /micromessenger/.test(navigator.userAgent.toLowerCase());
 }

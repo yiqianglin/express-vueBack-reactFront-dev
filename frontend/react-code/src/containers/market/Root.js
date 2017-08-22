@@ -7,30 +7,36 @@ import { Provider } from 'mobx-react';
 import * as stores from 'stores/market';
 
 const rootRoute = {
-  childRoutes: [{
-    path: '/',
-    component: require('./App').default,
-    childRoutes: [{
-      path: `${websitePath}/creditMarket.htm`,
-      getComponent(nextState, cb) {
-        require.ensure([], (require) => {
-          cb(null, require('./Home').default);
-        }, 'Home');
-      }
-    }]
-  }]
+  childRoutes: [
+    {
+      path: '/',
+      component: require('./App').default,
+      childRoutes: [
+        {
+          path: `${websitePath}/creditMarket.htm`,
+          getComponent(nextState, cb) {
+            require.ensure(
+              [],
+              (require) => {
+                cb(null, require('./Home').default);
+              },
+              'Home'
+            );
+          }
+        }
+      ]
+    }
+  ]
 };
 
 class Root extends Component {
   render() {
     return (
-      <Provider { ...stores }>
-        <Router history={browserHistory} routes={rootRoute}>
-        </Router>
+      <Provider {...stores}>
+        <Router history={browserHistory} routes={rootRoute} />
       </Provider>
     );
   }
 }
 
 export default Root;
-

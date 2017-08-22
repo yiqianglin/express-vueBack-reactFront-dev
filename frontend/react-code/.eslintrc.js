@@ -31,17 +31,6 @@ module.exports = {
       'warn',
       { vars: 'local', args: 'after-used', ignoreRestSiblings: true }
     ],
-    "spaced-comment": ["warn", "always", {
-        "line": {
-            "markers": ["/"],
-            "exceptions": ["-", "+"]
-        },
-        "block": {
-            "markers": ["!"],
-            "exceptions": ["*"],
-            "balanced": true
-        }
-    }],
     'import/prefer-default-export': 'off',
     'comma-dangle': [1, 'never'],
     'no-undef': 'off',

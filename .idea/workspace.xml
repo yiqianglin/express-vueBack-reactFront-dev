@@ -1,0 +1,1190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6412a1c0-2009-45cb-88db-09682d31d32c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/.babelrc" afterPath="$PROJECT_DIR$/frontend/react-code/.babelrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/.eslintignore" afterPath="$PROJECT_DIR$/frontend/react-code/.eslintignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/.eslintrc" afterPath="$PROJECT_DIR$/frontend/react-code/.eslintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/.eslintrc.js" afterPath="$PROJECT_DIR$/frontend/react-code/.eslintrc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/build/dev-server.js" afterPath="$PROJECT_DIR$/frontend/react-code/build/dev-server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/build/webpack.base.config.js" afterPath="$PROJECT_DIR$/frontend/react-code/build/webpack.base.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/config/config.js" afterPath="$PROJECT_DIR$/frontend/react-code/config/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/config/localConfig.js" afterPath="$PROJECT_DIR$/frontend/react-code/config/localConfig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/config/project.js" afterPath="$PROJECT_DIR$/frontend/react-code/config/project.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/package.json" afterPath="$PROJECT_DIR$/frontend/react-code/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/AcceptPrize.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/AcceptPrize.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/BlockGuess.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/BlockGuess.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/ChangePlayTypeSwitch.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/ChangePlayTypeSwitch.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/ChannelBinding.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/ChannelBinding.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/GameExtraInfo.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/GameExtraInfo.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/GetPlayTypeOptions.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/GetPlayTypeOptions.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/GetScore.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/GetScore.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/GetServerTime.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/GetServerTime.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/Guess.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/Guess.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/GuessQuote.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/GuessQuote.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/Index.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/Index.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/LastBigPrize.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/LastBigPrize.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/LightningLine.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/LightningLine.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/MallProductInfo.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/MallProductInfo.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/MallRecommendProductList.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/MallRecommendProductList.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/NewOdds.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/NewOdds.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/OpenClose.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/OpenClose.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/OthersPrize.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/OthersPrize.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/PlayTypeInfo.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/PlayTypeInfo.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/QueryPlayTypeSwitch.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/QueryPlayTypeSwitch.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/Register.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/Register.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/ScoreLoggerList.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/ScoreLoggerList.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/ServerCurRoundInfo.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/ServerCurRoundInfo.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/ShootAcceptPrize.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/ShootAcceptPrize.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/ShootTaskList.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/ShootTaskList.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/SmashEgg.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/SmashEgg.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/SmashEggCurrentRoundInfo.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/SmashEggCurrentRoundInfo.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/SmashEggHistoryRecord.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/SmashEggHistoryRecord.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/SmashEggWinnersList.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/SmashEggWinnersList.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/SystemConfig.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/SystemConfig.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/TaskList.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/TaskList.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/TaskNotice.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/TaskNotice.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UpDownHistoryChart.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UpDownHistoryChart.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UpdownGameResult.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UpdownGameResult.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UpdownGoldList.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UpdownGoldList.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UpdownHistoryRecord.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UpdownHistoryRecord.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UpdownRoundInfo.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UpdownRoundInfo.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UpdownUserGuess.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UpdownUserGuess.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UpdownUserGuessRecord.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UpdownUserGuessRecord.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UpdownUserGuessResult.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UpdownUserGuessResult.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UpdownUserNumAndHeadImgs.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UpdownUserNumAndHeadImgs.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UserChannelBind.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UserChannelBind.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UserInfo.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UserInfo.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UserRoundGuessRecord.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UserRoundGuessRecord.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UserSignin.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/UserSignin.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/WxRechargeNotify.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/WxRechargeNotify.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/WxRechargeScore.proto" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/proto/WxRechargeScore.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/Benevolence.scss" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/Benevolence.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/app.scss" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/app.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/awardLogger.scss" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/awardLogger.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/center.scss" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/center.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/components/centerBanner.scss" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/components/centerBanner.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/components/centerBtmBar.scss" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/components/centerBtmBar.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/components/centerGameArea.scss" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/components/centerGameArea.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/components/centerNavBar.scss" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/components/centerNavBar.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/components/loadingLayer.scss" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/components/loadingLayer.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/components/popFirstLogin.scss" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/components/popFirstLogin.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/home.scss" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/home.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/pop.scss" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/pop.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/productInfo.scss" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/productInfo.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/rules.scss" afterPath="$PROJECT_DIR$/frontend/react-code/src/assets/scss/market/rules.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/components/common/AlloyFinger.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/components/common/AlloyFinger.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/components/common/AutoLoadMore.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/components/common/AutoLoadMore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/components/common/PopGetGold.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/components/common/PopGetGold.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/components/common/PopGetGoldDetail.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/components/common/PopGetGoldDetail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/components/common/PopGetGoldResult.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/components/common/PopGetGoldResult.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/components/common/PopLotteryGuide.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/components/common/PopLotteryGuide.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/components/common/PopProtocol.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/components/common/PopProtocol.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/components/common/PopSign.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/components/common/PopSign.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/components/common/PopSignSucc.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/components/common/PopSignSucc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/components/common/PopToast.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/components/common/PopToast.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/components/common/PopWeixinSubscribe.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/components/common/PopWeixinSubscribe.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/components/common/ReactLink.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/components/common/ReactLink.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/components/common/ReactMarquee.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/components/common/ReactMarquee.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/components/common/ReactMarquee_v2.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/components/common/ReactMarquee_v2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/components/common/ReactSlider.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/components/common/ReactSlider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/containers/market/App.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/containers/market/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/containers/market/Home.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/containers/market/Home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/containers/market/Root.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/containers/market/Root.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/entry/market.entry.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/entry/market.entry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/stores/common/RechargeStore.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/stores/common/RechargeStore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/stores/common/SystemStore.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/stores/common/SystemStore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/stores/common/UserStore.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/stores/common/UserStore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/stores/market/ProductStore/Product.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/stores/market/ProductStore/Product.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/stores/market/ProductStore/ProductList.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/stores/market/ProductStore/ProductList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/stores/market/ProductStore/index.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/stores/market/ProductStore/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/stores/market/RechargeStore.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/stores/market/RechargeStore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/stores/market/SystemStore.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/stores/market/SystemStore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/stores/market/UserStore.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/stores/market/UserStore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/stores/market/actionFunc.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/stores/market/actionFunc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/stores/market/index.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/stores/market/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/stores/market/testData.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/stores/market/testData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/utils/cityCodeData.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/utils/cityCodeData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/utils/utilsData.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/utils/utilsData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/react-code/src/utils/utilsFunc.js" afterPath="$PROJECT_DIR$/frontend/react-code/src/utils/utilsFunc.js" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>babel-plugin-import</find>
+      <find>N</find>
+      <find>PopExchangeConfirm</find>
+      <find>userInfo</find>
+      <find>callBackUserInfo</find>
+      <find>Nav</find>
+      <find>p</find>
+      <find>prox</find>
+      <find>pro</find>
+      <find>loadSuccessCallback</find>
+      <find>getSERVER</find>
+      <find>proxy</find>
+      <find>firstLoadGetUserInfo</find>
+      <find>loadProtoFile</find>
+      <find>proto</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>E:\xunlei\express-vueBack-reactFront-dev\frontend\react-code\build</dir>
+      <dir>E:\xunlei\express-vueBack-reactFront-dev\frontend\react-code\src</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/frontend/react-code/src/stores/market/SystemStore.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/.eslintrc" />
+        <option value="$PROJECT_DIR$/frontend/react-code/.eslintrc.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/stores/common/RechargeStore.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/stores/common/UserStore.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/stores/market/ProductStore/index.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/stores/market/ProductStore/Product.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/stores/market/ProductStore/ProductList.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/stores/market/index.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/stores/market/actionFunc.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/stores/market/RechargeStore.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/stores/market/testData.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/utils/utilsData.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/entry/market.entry.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/containers/market/原本App.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/containers/market/原本Home.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/containers/market/原本Root.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/components/market/ProductPanel.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/components/market/Banner.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/components/market/Nav.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/components/common/PopSign.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/components/market/PopQQqunTips.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/.babelrc" />
+        <option value="$PROJECT_DIR$/frontend/react-code/build/webpack.base.config.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/components/market/HomeMarquee.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/stores/market/UserStore.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/build/dev-server.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/containers/market/Home.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/stores/common/SystemStore.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/utils/utilsFunc.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/package.json" />
+        <option value="$PROJECT_DIR$/frontend/react-code/config/config.js" />
+        <option value="$PROJECT_DIR$/frontend/react-code/src/containers/market/App.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="react-code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="react-code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="react-code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stores" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="market" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="react-code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stores" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="react-code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entry" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="react-code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="containers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="market" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="react-code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="react-code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="react-code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backendWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express-vueBack-reactFront-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="nodejs_interpreter_path" value="D:/Program Files/nodejs/node" />
+    <property name="node.js.selected.package.eslint" value="E:\xunlei\express-vueBack-reactFront-dev\frontend\react-code\node_modules\eslint" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.standard" value="E:\xunlei\express-vueBack-reactFront-dev\frontend\react-code\node_modules\eslint" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6412a1c0-2009-45cb-88db-09682d31d32c" name="Default" comment="" />
+      <created>1503383052226</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1503383052226</updated>
+      <workItem from="1503383053774" duration="582000" />
+      <workItem from="1503384067057" duration="126000" />
+      <workItem from="1503384221861" duration="256000" />
+      <workItem from="1503384505193" duration="5132000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6096000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24920969" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/.eslintrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/.eslintrc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="802">
+          <caret line="46" column="67" lean-forward="true" selection-start-line="46" selection-start-column="67" selection-end-line="46" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/stores/common/RechargeStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/stores/market/ProductStore/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/stores/market/ProductStore/Product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/stores/market/ProductStore/ProductList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="32" column="39" lean-forward="true" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/stores/market/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/stores/market/RechargeStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/stores/market/testData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/utils/utilsData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="30" column="52" lean-forward="true" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/entry/market.entry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <marker date="1503384951612" expanded="true" signature="0:17" ph="/** 项目入口文件 ...*/" />
+            <marker date="1503384951612" expanded="false" signature="25:124" ph="..." />
+            <marker date="1503384951612" expanded="true" signature="238:368" ph="{...}" />
+            <marker date="1503384951612" expanded="true" signature="295:364" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/containers/market/Benevolence.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1502356222930" expanded="true" signature="0:54" ph="/** Created by Administrator on 2017/4/23 0023. ...*/" />
+            <marker date="1502356222930" expanded="false" signature="62:190" ph="..." />
+            <marker date="1502356222930" expanded="true" signature="274:2049" ph="{...}" />
+            <marker date="1502356222930" expanded="true" signature="287:2047" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/containers/market/AwardLogger.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1501578017213" expanded="true" signature="0:54" ph="/** Created by Administrator on 2017/4/23 0023. ...*/" />
+            <marker date="1501578017213" expanded="false" signature="62:642" ph="..." />
+            <marker date="1501578017213" expanded="true" signature="663:898" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="681:879" ph="{&quot;systemStore&quot;: store.systemStore...}" />
+            <marker date="1501578017213" expanded="true" signature="961:7078" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="984:1354" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="1051:1135" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="1090:1129" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="1155:1349" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="1369:1874" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="1412:1868" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="1589:1860" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="1898:2042" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="1922:1982" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="1996:2031" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="2072:2881" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="2125:2195" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="2265:2286" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="2317:2338" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="2366:2869" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="2401:2426" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="2691:2861" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="2907:3144" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="3171:3224" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="3285:3682" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="3291:3361" ph="//..." />
+            <marker date="1501578017213" expanded="true" signature="3393:3449" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="3520:3572" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="3632:3659" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="3695:7076" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="3867:5722" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="3910:4166" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="4903:4924" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="6065:6087" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="6327:6625" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="6442:6553" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="7125:7376" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="7138:7374" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="7410:7695" ph="{...}" />
+            <marker date="1501578017213" expanded="true" signature="7423:7693" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/containers/market/Center.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1503382514913" expanded="true" signature="7:688" ph="..." />
+            <marker date="1503382514913" expanded="true" signature="710:821" ph="{...}" />
+            <marker date="1503382514913" expanded="true" signature="728:802" ph="{&quot;systemStore&quot;: stores.systemStore...}" />
+            <marker date="1503382514913" expanded="true" signature="879:1703" ph="{...}" />
+            <marker date="1503382514913" expanded="true" signature="903:1242" ph="{...}" />
+            <marker date="1503382514913" expanded="true" signature="1020:1105" ph="{...}" />
+            <marker date="1503382514913" expanded="true" signature="1057:1099" ph="{...}" />
+            <marker date="1503382514913" expanded="true" signature="1137:1238" ph="{...}" />
+            <marker date="1503382514913" expanded="true" signature="1254:1701" ph="{...}" />
+            <marker date="1503382514913" expanded="true" signature="1342:1677" ph="{...}" />
+            <marker date="1503382514913" expanded="true" signature="1410:1428" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/containers/market/ProductInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1501578626055" expanded="true" signature="0:49" ph="/** Created by Administrator on 2017/4/15. ...*/" />
+            <marker date="1501578626055" expanded="false" signature="58:844" ph="..." />
+            <marker date="1501578626055" expanded="true" signature="865:974" ph="{...}" />
+            <marker date="1501578626055" expanded="true" signature="883:955" ph="{&quot;userStore&quot;: store.userStore...}" />
+            <marker date="1501578626055" expanded="true" signature="1037:3297" ph="{...}" />
+            <marker date="1501578626055" expanded="true" signature="1060:1129" ph="{...}" />
+            <marker date="1501578626055" expanded="true" signature="1097:1124" ph="{...}" />
+            <marker date="1501578626055" expanded="true" signature="1153:1475" ph="{...}" />
+            <marker date="1501578626055" expanded="true" signature="1324:1464" ph="{...}" />
+            <marker date="1501578626055" expanded="true" signature="1378:1454" ph="{...}" />
+            <marker date="1501578626055" expanded="true" signature="1404:1442" ph="{...}" />
+            <marker date="1501578626055" expanded="true" signature="1488:1674" ph="{...}" />
+            <marker date="1501578626055" expanded="true" signature="1543:1581" ph="{...}" />
+            <marker date="1501578626055" expanded="true" signature="1587:1670" ph="{...}" />
+            <marker date="1501578626055" expanded="true" signature="1686:3295" ph="{...}" />
+            <marker date="1501578626055" expanded="true" signature="1840:1917" ph="{...}" />
+            <marker date="1501578626055" expanded="true" signature="1939:2329" ph="{...}" />
+            <marker date="1501578626055" expanded="true" signature="2413:2668" ph="{...}" />
+            <marker date="1501578626055" expanded="true" signature="2773:2786" ph="/*...*/" />
+            <marker date="1501578626055" expanded="true" signature="2878:2886" ph="/*...*/" />
+            <marker date="1501578626055" expanded="true" signature="2898:2994" ph="{...}" />
+            <marker date="1501578626055" expanded="true" signature="3007:3014" ph="/*...*/" />
+            <marker date="1501578626055" expanded="true" signature="3026:3108" ph="{...}" />
+            <marker date="1501578626055" expanded="true" signature="3121:3132" ph="/*...*/" />
+            <marker date="1501578626055" expanded="true" signature="3144:3226" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/containers/market/原本App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1503385008460" expanded="true" signature="7:283" ph="..." />
+            <marker date="1503385008460" expanded="true" signature="374:622" ph="{...}" />
+            <marker date="1503385008460" expanded="true" signature="398:403" ph="{...}" />
+            <marker date="1503385008460" expanded="true" signature="416:620" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/containers/market/Rules.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1499158673070" expanded="true" signature="0:38" ph="/** Created by cc on 2017/4/17. ...*/" />
+            <marker date="1499158673070" expanded="false" signature="47:122" ph="..." />
+            <marker date="1499158673070" expanded="true" signature="169:1319" ph="{...}" />
+            <marker date="1499158673070" expanded="true" signature="182:1317" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/containers/market/原本Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="61" column="20" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+          <folding>
+            <marker date="1503385013824" expanded="true" signature="7:292" ph="..." />
+            <marker date="1503385013824" expanded="true" signature="404:1852" ph="{...}" />
+            <marker date="1503385013824" expanded="true" signature="427:497" ph="{...}" />
+            <marker date="1503385013824" expanded="true" signature="464:492" ph="{...}" />
+            <marker date="1503385013824" expanded="true" signature="521:550" ph="{...}" />
+            <marker date="1503385013824" expanded="true" signature="599:1589" ph="{...}" />
+            <marker date="1503385013824" expanded="true" signature="902:1101" ph="{&quot;responseType&quot;: 'json'...}" />
+            <marker date="1503385013824" expanded="true" signature="951:1069" ph="{&quot;Accept&quot;: 'image/png'...}" />
+            <marker date="1503385013824" expanded="true" signature="1129:1486" ph="{...}" />
+            <marker date="1503385013824" expanded="true" signature="1318:1366" ph="{...}" />
+            <marker date="1503385013824" expanded="true" signature="1372:1457" ph="{...}" />
+            <marker date="1503385013824" expanded="true" signature="1398:1445" ph="{&quot;userData&quot;: data.result...}" />
+            <marker date="1503385013824" expanded="true" signature="1512:1583" ph="{...}" />
+            <marker date="1503385013824" expanded="true" signature="1602:1850" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/containers/market/原本Root.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/components/common/AlloyFinger.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="30" column="3" lean-forward="true" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/components/common/AutoLoadMore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/components/common/PopGetGoldDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/components/common/PopWeixinSubscribe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/components/market/ActiveCode.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/components/market/Addressee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/components/market/BottomRemark.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/components/market/CenterBanner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/components/market/CenterBtmBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/components/market/CenterNavBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/components/market/Banner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="60" column="16" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/components/market/Nav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="79" column="13" lean-forward="false" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/components/common/PopSign.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="46" column="48" lean-forward="false" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/components/market/PopQQqunTips.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/.babelrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/components/market/HomeMarquee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="15" column="78" lean-forward="true" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/components/market/ProductPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="968">
+          <caret line="48" column="55" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="55" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/stores/market/actionFunc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2574">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/stores/common/UserStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2470">
+          <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/stores/market/UserStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3682">
+          <caret line="309" column="0" lean-forward="false" selection-start-line="309" selection-start-column="0" selection-end-line="309" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/build/postcss.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/build/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1452">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/build/webpack.base.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-836">
+          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/build/webpack.dev.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1276">
+          <caret line="58" column="10" lean-forward="false" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/build/dev-server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/containers/market/Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#39#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/utils/utilsFunc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#17#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/stores/common/SystemStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="87" column="14" lean-forward="false" selection-start-line="87" selection-start-column="14" selection-end-line="87" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/config/localConfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/config/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/react-code/src/containers/market/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

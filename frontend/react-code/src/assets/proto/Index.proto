@@ -21,6 +21,9 @@ message IndexResult{
    string crazybetImage = 17;
    string moreImage = 18;
    string centerImage = 19;
+   string catchbirdsLinkUrl = 20;
+   string catchbirdsImage = 21;
+   int32 catchbirdsUserNum = 22;
 }
 message Banner{
    string title = 1;

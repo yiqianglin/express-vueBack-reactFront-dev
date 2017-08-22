@@ -29,7 +29,7 @@ compiler.plugin('compilation', function (compilation) {
 });
 
 if (proxyTable.context) {
-  // app.use(proxyMiddleware(proxyTable.context, proxyTable.options));
+  app.use(proxyMiddleware(proxyTable.context, proxyTable.options));
 }
 
 app.use(require('connect-history-api-fallback')());

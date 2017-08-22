@@ -1,0 +1,14 @@
+
+syntax = "proto3";
+package com.xunleijr.game.vo.hitme ;
+            
+message GetProbabilityResult{
+    string code = 1;
+    string msg = 2;
+    repeated Prob probList = 3;
+}
+  
+message Prob{
+    int32 pos = 1;
+    double prob = 2;
+}

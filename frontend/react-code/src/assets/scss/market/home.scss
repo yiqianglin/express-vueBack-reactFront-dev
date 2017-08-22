@@ -25,9 +25,11 @@
     min-height: 100%;
     padding-bottom: 40px;
 
-    background-color: #e8e8e8;
+    background-color: #773817;
 
     flex: 1;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
     /*banner*/
     .banner-wrapper
     {
@@ -633,7 +635,7 @@
         background-image: url('../../img/market/home/fixed-go-game-btn.png');
         background-size: 100% 100%;
 
-        index: 90;
+        z-index: 90;
     }
 
     /*bottomRemark*/

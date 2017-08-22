@@ -26,6 +26,15 @@ module.exports = {
     contentPath: 'game-web-hitme',
     htmlPath: 'shootGame'
   },
+  birdHome: {
+    appName: 'birdHome',
+    title: '捕鸟达人',
+    port: 8096,
+    urlPath: '/game/bird',
+    indexPath: '/game/bird/home.htm',
+    contentPath: 'game-web-catchbirds',
+    htmlPath: 'birdHome'
+  },
   market: {
     appName: 'market',
     title: '领奖台',

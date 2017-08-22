@@ -1,0 +1,16 @@
+
+syntax = "proto3";
+package com.xunleijr.game.vo.catchbirds ;
+message CatchBirdsRewardConfigResult{
+    string code = 1;
+    string msg = 2;
+    repeated RewardConfig rewardConfig = 3;
+}
+message RewardConfig {
+   int32 betNum = 1;
+   repeated RewardInfo rewardInfo = 2;
+}
+message RewardInfo {
+   int32 selectNum = 1;
+   double reword= 2;
+}

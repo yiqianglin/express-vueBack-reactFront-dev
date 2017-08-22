@@ -1,0 +1,11 @@
+
+syntax = "proto3";
+package com.xunleijr.game.vo.hitme ;
+ 
+message HitmeSystemPropertiesResult{
+    string code = 1;
+    string msg = 2;
+    int32 viewProbMoney = 3;
+    int32 userTodayViewProbSwitch = 4;
+    int32 todayViewProbFreeFlag = 5;
+}

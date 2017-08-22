@@ -27,12 +27,18 @@ let config = {
     assetsPublicPath: '/',
     proxyTable: {
       context: [
-        '/gameServer/system',
         '/game-web-site/game/system',
+        '/game-web-site/game/weixin',
+        '/game-web-site/game/user',
+        '/game-web-updown/game/updown',
+        '/game-web-mall/game/mall',
+        '/game-web-smashegg/game/smashegg',
+        '/game-web-hitme/game/hitme',
+        '/game-web-catchbirds/game/catchbirds'
       ],
       options: {
+        // target: 'http://192.168.25.151:8080',
         target: 'http://test.weitrades.com',
-        // target: 'http://127.0.0.1:3000',
         changeOrigin: true
       }
     },

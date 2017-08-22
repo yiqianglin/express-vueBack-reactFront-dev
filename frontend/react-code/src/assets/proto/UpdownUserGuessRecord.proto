@@ -1,5 +1,5 @@
 syntax = "proto3";
-package com.xunleijr.game.vo;
+package com.xunleijr.game.vo.updown;
 
 message UpdownUserGuessRecordResult {
     string code = 1;

@@ -5,10 +5,17 @@ message UpdownGameResultResult {
     string type = 1 ;
     string code = 2;
     string msg = 3;
-    int64 roundId = 4;
-    int32 result = 5;
-    int32 mode = 6;
-    double newQuote = 7;
-    int64 newQuoteTs = 8;
-    int64 preQuoteTs = 9;
+    int32 mode = 4;
+    int64 roundId = 5;
+    repeated PlayTypeResult playTypeResult = 6;
+}
+
+message PlayTypeResult {
+    int32 playType = 1;
+    int32 optionId = 2;
+    string optionValue = 3;
+    string result = 4;
+    double newQuote = 5;
+    int64 newQuoteTs = 6;
+    int64 preQuoteTs = 7;
 }

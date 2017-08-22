@@ -11,4 +11,7 @@ message UserInfoResult{
     bool signinStatus = 6;
     int32 continuousNum = 7;
     double totalRechargeAmount = 8;
+    string mobile = 9;
+    int32 userType = 10;
+    string bindMobileTime = 11;
 }

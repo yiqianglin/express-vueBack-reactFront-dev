@@ -1,67 +1,73 @@
+/**
+ * Created by cc on 2017/4/14.
+ */
 import React, { Component } from 'react';
-import { Router, Route } from 'react-router';
 import { autorun } from 'mobx';
 import { inject, observer } from 'mobx-react';
-import axios from 'axios';
-import qs from 'qs';
+import { setAddresseeShow } from 'stores/market/actionFunc';
+import { setWechatTitle } from 'utils/utilsFunc';
+import async from 'async';
+import Banner from 'components/market/Banner';
+import Nav from 'components/market/Nav';
+import Marquee from 'components/market/HomeMarquee';
+import ProductPanel from 'components/market/ProductPanel';
+import FixedToGameButton from 'components/market/FixedToGameButton';
+import QQqun from 'components/market/QQqun';
+import BottomRemark from 'components/market/BottomRemark';
 
 import 'assets/scss/market/home.scss';
 import 'assets/scss/market/pop.scss';
 
 @inject('systemStore', 'productListStore', 'userStore') @observer
 export default class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      userData: null
-    };
-  }
-
   componentDidMount() {
-    this.getUserData();
+    setWechatTitle('领奖台');
+    const { systemStore, productListStore, userStore } = this.props;
+    this.getHomeData = autorun(() => {
+      if (systemStore.loadSuccess) {
+        // 热门奖品和更多商品加载后，根据路由进行锚点定位
+        async.parallel(
+          {
+            getProductList: async function getProductList(done) {
+              await productListStore.getProductList(1);
+              done(null, null);
+            },
+            productListStore: async function getProductList(done) {
+              await productListStore.getProductList(0);
+              done(null, null);
+            }
+          },
+          (error, result) => {
+            if (new RegExp('productHot').test(this.props.location.hash)) {
+              console.log('回到热点');
+            } else if (new RegExp('productMore').test(this.props.location.hash)) {
+              console.log('回到热点');
+            }
+          }
+        );
+        systemStore.getBannerList();
+      }
+    });
   }
-
-  getUserData(params, method, timeout = 60000) {
-    // const url = 'http://127.0.0.1:3000/demo/demo4/home/123_henix';
-    const url = 'http://127.0.0.1:3000/demo/demo5/showUser';
-    // const url = 'http://test.weitrades.com/game-web-site/game/system/getServerTime.htm';
-    return axios
-      .post(url, qs.stringify({ userId: 2, name: 'henix' }), {
-        responseType: 'json',
-        headers: {
-          Accept: 'image/png',
-          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-        },
-        timeout: 60000
-      })
-      .then((response) => {
-        const data = response.data;
-        console.log(data);
-        console.groupCollapsed();
-        console.table(data);
-        console.groupEnd();
-        if (data.code !== '200') {
-          console.log('客户端收到错误返回。');
-        } else {
-          this.setState({
-            userData: data.result
-          });
-        }
-        return data;
-      })
-      .catch((error) => {
-        console.log('客户端catch', error);
-        return error;
-      });
+  // 关闭个人中心弹窗
+  cancelUserCenterHandler = (event) => {
+    if (this.props.userStore.isLogin) {
+      this.refs.nav.wrappedInstance.userCenterHandler(false, event);
+    }
   }
 
   render() {
-    const { userData } = this.state;
     return (
-      <div className="homepage" onClick={ (event) => { this.cancelUserCenterHandler(event); } }>
-        没有请求参数 to: /home
-        <br/>
-        { JSON.stringify(userData) }
+      <div className="homepage" id="homepage" onClick={ (event) => { this.cancelUserCenterHandler(event); } }>
+        <Banner />
+        {
+          this.props.userStore.isLogin ? <Nav ref="nav"/> : ''
+        }
+        <QQqun />
+        <Marquee />
+        <ProductPanel ref="ProductPanel"/>
+        <FixedToGameButton />
+        <BottomRemark />
       </div>
     );
   }
