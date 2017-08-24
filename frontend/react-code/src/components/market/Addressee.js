@@ -3,22 +3,22 @@
  */
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
-import { setAddressee } from 'stores/market/actionFunc';
 import { Picker, List, WhiteSpace } from 'antd-mobile';
+import { setAddressee } from 'stores/market/actionFunc';
 import { cityCode2cityName } from 'utils/utilsFunc';
 import district from 'utils/cityCodeData';
 
 const CustomChildren = (props) => {
   return (
-  <div
-    onClick={props.onClick}
-  >
-    <div className="input-con">
-      <label htmlFor="">省市</label>
-      <div type="text" className="" id="addressee-province">{props.extra[0]}</div>
-      <div type="text" className="" id="addressee-city">{props.extra[1]}</div>
+    <div
+      onClick={props.onClick}
+    >
+      <div className="input-con">
+        <label htmlFor="">省市</label>
+        <div type="text" className="" id="addressee-province">{props.extra[0]}</div>
+        <div type="text" className="" id="addressee-city">{props.extra[1]}</div>
+      </div>
     </div>
-  </div>
   );
 };
 
@@ -39,14 +39,16 @@ class AreaPicker extends React.Component {
   format = (vals) => {
     return vals;
   }
+
   render() {
     return (
       <div>
-          <Picker extra="请选择(可选)" data={district} title="选择地区" onPickerChange = {this.onPickerChange} value={this.state.value}
-                  format={this.format} cols={2}
-          >
-            <CustomChildren />
-          </Picker>
+        <Picker extra="请选择(可选)" data={district} title="选择地区" onPickerChange={this.onPickerChange}
+          value={this.state.value}
+          format={this.format} cols={2}
+        >
+          <CustomChildren />
+        </Picker>
       </div>
     );
   }
@@ -73,11 +75,11 @@ export default class Addressee extends Component {
 
   handleChange = (target, value) => {
     this.setState({ [target]: value });
-    /* this.props.showToast(data.msg);*/
+    /* this.props.showToast(data.msg); */
   }
 
   toCheckAddressee = () => {
-    /* if(!/^[\u4e00-\u9fa5 ]{2,10}$/.test(this.state.addresseeName)){*/
+    /* if(!/^[\u4e00-\u9fa5 ]{2,10}$/.test(this.state.addresseeName)){ */
     if (!/^[\u4e00-\u9fa5A-Za-z0-9-_]+$/.test(this.state.addresseeName)) {
       this.props.showToast('请输入正确的收件人姓名');
       return;
@@ -93,7 +95,7 @@ export default class Addressee extends Component {
     this.toggleCheckAddressPanel();
   }
 
-  toggleCheckAddressPanel= () => {
+  toggleCheckAddressPanel = () => {
     this.setState((prevState, props) => {
       return { isCheckAddress: !prevState.isCheckAddress };
     });
@@ -119,19 +121,26 @@ export default class Addressee extends Component {
           <div className="input-con">
             <label htmlFor="addressee-name">收件人</label>
             <input type="text" className="" id="addressee-name" placeholder="请填写收件人姓名"
-                   defaultValue={addresseeName} maxLength="10" onChange={(event) => { this.handleChange('addresseeName', event.target.value); }}
+              defaultValue={addresseeName} maxLength="10" onChange={(event) => {
+                this.handleChange('addresseeName', event.target.value);
+              }}
             />
           </div>
           <div className="input-con">
             <label htmlFor="addressee-phone">联系电话</label>
             <input type="tel" className="" id="addressee-phone" placeholder="请填写收件人联系电话"
-                   defaultValue={addresseePhone} maxLength="11" onChange={(event) => { this.handleChange('addresseePhone', event.target.value); }}
+              defaultValue={addresseePhone} maxLength="11" onChange={(event) => {
+                this.handleChange('addresseePhone', event.target.value);
+              }}
             />
           </div>
           <AreaPicker onChange={this.handleChange} defaultValue={{ addresseeProvince, addresseeCity }}/>
           <div className="input-con">
             <label htmlFor="addressee-address">详细地址</label>
-            <input type="text" className="" id="addressee-address" placeholder="请填写详细地址" maxLength="50" onChange={(event) => { this.handleChange('addresseeAddress', event.target.value); }}
+            <input type="text" className="" id="addressee-address" placeholder="请填写详细地址" maxLength="50"
+              onChange={(event) => {
+                this.handleChange('addresseeAddress', event.target.value);
+              }}
             />
           </div>
         </form>
@@ -145,8 +154,7 @@ export default class Addressee extends Component {
             receivedPhone: addresseePhone,
             receivedProvince: addresseeProvince,
             receiver: addresseeName
-          }} sumbitHandler={this.submitAddress}
-            toggleHandler={this.toggleCheckAddressPanel}
+          }} sumbitHandler={this.submitAddress} toggleHandler={this.toggleCheckAddressPanel}
           /> : null
         }
 
@@ -165,44 +173,48 @@ class CheckAddressPanel extends Component {
       <div className="pop-wrapper pop-show">
         <section className="pop-mask"></section>
         <div className="pop-common pop-set-addressee-confirm">
-          <div className="close-btn" onClick={() => { toggleHandler(); }}></div>
+          <div className="close-btn" onClick={() => {
+            toggleHandler();
+          }}></div>
           <div className="hd-title"></div>
           <div className="bd-wrp">
 
             <div className="bd-wrp-inner">
-                <div className="panel-con panel-con-set-addressee-confirm">
-                  <ul className="form">
-                    <li>
-                      <label htmlFor="addressee-name">收件人</label>
-                      <input type="tel" className="" id="addressee-phone"
-                             defaultValue={receiver} readOnly
-                      />
-                    </li>
-                    <li>
-                      <label htmlFor="addressee-phone">联系电话</label>
-                      <input type="phone" className="" id="addressee-phone"
-                             defaultValue={receivedPhone} readOnly/>
-                    </li>
-                    <li>
-                      <label htmlFor="addressee-phone">省市</label>
-                      <input type="phone" className="" id="addressee-phone"
-                             defaultValue={`${provinceName} ${cityName}`} readOnly/>
-                    </li>
+              <div className="panel-con panel-con-set-addressee-confirm">
+                <ul className="form">
+                  <li>
+                    <label htmlFor="addressee-name">收件人</label>
+                    <input type="tel" className="" id="addressee-phone"
+                      defaultValue={receiver} readOnly
+                    />
+                  </li>
+                  <li>
+                    <label htmlFor="addressee-phone">联系电话</label>
+                    <input type="phone" className="" id="addressee-phone"
+                      defaultValue={receivedPhone} readOnly/>
+                  </li>
+                  <li>
+                    <label htmlFor="addressee-phone">省市</label>
+                    <input type="phone" className="" id="addressee-phone"
+                      defaultValue={`${provinceName} ${cityName}`} readOnly/>
+                  </li>
 
-                    <li className="address">
-                      <label htmlFor="addressee-address">详细地址</label>
-                      <textarea className="" id="addressee-address"
-                                 defaultValue={receivedAddress} readOnly
-                      />
-                    </li>
-                  </ul>
-                  <p className="set-addressee-remark">收货信息一经确认，暂不支持修改</p>
-                  <a href="javascript:void(0);" className="btn-long btn-sure-addressee" onClick={ () => { this.props.sumbitHandler(); }}>我确认信息无误</a>
-                </div>
+                  <li className="address">
+                    <label htmlFor="addressee-address">详细地址</label>
+                    <textarea className="" id="addressee-address"
+                      defaultValue={receivedAddress} readOnly
+                    />
+                  </li>
+                </ul>
+                <p className="set-addressee-remark">收货信息一经确认，暂不支持修改</p>
+                <a href="javascript:void(0);" className="btn-long btn-sure-addressee" onClick={ () => {
+                  this.props.sumbitHandler();
+                }}>我确认信息无误</a>
               </div>
+            </div>
 
           </div>
-      </div>
+        </div>
       </div>
     );
   }

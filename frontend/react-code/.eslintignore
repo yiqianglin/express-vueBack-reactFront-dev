@@ -1,4 +1,4 @@
-build/*.js
-config/*.js
-src/assets/js/*.js
-src/utils/cityCodeData.js
+/build/*.js
+/config/*.js
+/assets/js/*.js
+/src/utils/cityCodeData.js

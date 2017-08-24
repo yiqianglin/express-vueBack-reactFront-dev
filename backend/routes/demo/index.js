@@ -5,7 +5,7 @@ import demo3 from './demo3';
 import demo4 from './demo4';
 import demo5 from './demo5';
 
-var router = express.Router();
+const router = express.Router();
 
 // router.use('/demo1', demo1);
 router.use('/demo2', demo2);

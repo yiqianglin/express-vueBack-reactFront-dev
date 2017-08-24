@@ -63,8 +63,8 @@ export default class ProductInfo extends Component {
     });
     const status = {
       isShowActiveCode: !!(exchangeRecordInfo && exchangeRecordInfo.receivedStatus === 0 && exchangeRecordInfo.skinFlg !== 1), // 非实物且非皮肤类型（激活码类型）
-      isShowEntity: !!(exchangeRecordInfo && exchangeRecordInfo.receivedStatus !== 0 && exchangeRecordInfo.skinFlg !== 1),  // 实物类型
-      isShowSkin: !!(exchangeRecordInfo && exchangeRecordInfo.skinFlg === 1 && skinServerList)  // 皮肤类型
+      isShowEntity: !!(exchangeRecordInfo && exchangeRecordInfo.receivedStatus !== 0 && exchangeRecordInfo.skinFlg !== 1), // 实物类型
+      isShowSkin: !!(exchangeRecordInfo && exchangeRecordInfo.skinFlg === 1 && skinServerList) // 皮肤类型
     };
 
     // 商品详情头部数据
@@ -84,20 +84,20 @@ export default class ProductInfo extends Component {
     return (
       <div className={productInfoClass}>
         <div className="top-wrapper">
-          {/* 顶部商品详情介绍*/}
+          {/* 顶部商品详情介绍 */}
           <ProductDetailsTop productDetailsTopData={productDetailsTopData} />
 
-          {/* 激活码*/}
+          {/* 激活码 */}
           {status.isShowActiveCode
             ? <ExchangeRecordInfoActiveCodeCommon/>
             : null}
 
-          {/* 实物*/}
+          {/* 实物 */}
           {status.isShowEntity
             ? <ExchangeRecordInfoEntity/>
             : null}
 
-          {/* 王者荣耀皮肤*/}
+          {/* 王者荣耀皮肤 */}
           {status.isShowSkin
             ? <ExchangeRecordInfoGameSkin/>
             : null}

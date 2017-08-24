@@ -21,19 +21,18 @@ class CenterBanner extends Component {
     const { banner } = this.props;
     const { indexShow } = this.state;
     return (
-        <div className="banner-part" >
-
-          <section className="banner">
-            <div className="inner-wrapper">
-              <Carousel
-                className="my-carousel" autoplay={true} infinite={banner.length > 1}
-                beforeChange={(from, to) => {}}
-                afterChange={(index) => { return this.setState({ indexShow: index }); }}
-                dots={false}
-                selectedIndex={indexShow}
-              >
-                {banner.map((elem, index) => {
-                  return (
+      <div className="banner-part" >
+        <section className="banner">
+          <div className="inner-wrapper">
+            <Carousel
+              className="my-carousel" autoplay={true} infinite={banner.length > 1}
+              beforeChange={(from, to) => {}}
+              afterChange={(index) => { return this.setState({ indexShow: index }); }}
+              dots={false}
+              selectedIndex={indexShow}
+            >
+              {banner.map((elem, index) => {
+                return (
                   <a href={elem.url ? elem.url : 'javascript:void(0);'} key={index} className="banner-link">
                     <img
                       src={elem.image}
@@ -46,11 +45,11 @@ class CenterBanner extends Component {
                       }}
                     />
                   </a>
-                  );
-                })}
-              </Carousel>
-            </div>
-            <div className="page-index-con">
+                );
+              })}
+            </Carousel>
+          </div>
+          <div className="page-index-con">
             {
               banner.map((item, index) => {
                 return (
@@ -58,10 +57,10 @@ class CenterBanner extends Component {
                 );
               })
             }
-            </div>
-          </section>
-          <section className="banner-lates"></section>
-        </div>
+          </div>
+        </section>
+        <section className="banner-lates"></section>
+      </div>
     );
   }
 }

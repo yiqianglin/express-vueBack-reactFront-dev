@@ -96,12 +96,12 @@ class SetAddresseeConfirm extends Component {
           <li>
             <label htmlFor="addressee-name">收件人</label>
             <input type="text" className="" id="addressee-name" placeholder="请填写收件人姓名"
-                   defaultValue={addresseeName} maxLength="10" onChange={(event) => { this.handleChange('addresseeName', event.target.value); }}/>
+              defaultValue={addresseeName} maxLength="10" onChange={(event) => { this.handleChange('addresseeName', event.target.value); }}/>
           </li>
           <li>
             <label htmlFor="addressee-phone">联系电话</label>
             <input type="phone" className="" id="addressee-phone" placeholder="请填写收件人联系电话"
-                   defaultValue={addresseePhone} maxLength="11" onChange={(event) => { this.handleChange('addresseePhone', event.target.value); }}/>
+              defaultValue={addresseePhone} maxLength="11" onChange={(event) => { this.handleChange('addresseePhone', event.target.value); }}/>
           </li>
           <li>
             <AreaPicker onChange={this.handleChange} defaultValue={{ addresseeProvince, addresseeCity }}/>

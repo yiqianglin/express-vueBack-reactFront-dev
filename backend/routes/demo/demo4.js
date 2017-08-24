@@ -8,28 +8,34 @@
 // 如果后端也对应设置了format
 // 会根据对应的format给出不同的response
 
-
 import express from 'express';
-var router = express.Router();
 
+const router = express.Router();
 
 router.get('/', (req, res, next) => {
-    res.render('index',{})
+  res.render('index', {});
 });
 
 router.post('/home/:id', (req, res, next) => {
-	console.log(req.params);	// { id: '123_henix'}
-	console.log(req.body);	// { userId: 2, name: henix }
-	res.setHeader('Content-Type', 'text/plain');
-	res.cookie('cart', {'username': 'henix'}, {'maxAge': 90000});
-    res.format({ 'text/plain': function() { res.send('hey'); }, // 如果req的头设置成*/*，则text/plain会被匹配
-    			 'text/html': function() { res.send('<p>hey</p>'); },
-    			 'application/json': function() { res.send({message:'hey'}); },
-    			 'default': function() {
-    			 	res.status(406).send('客户端希望接受到的内容类型，服务端不懂哦。');	//自定义的406状态，如果没有default也会返回406状态的响应
-    			 }
-    			});
-   	// return next();
+  console.log(req.params); // { id: '123_henix'}
+  console.log(req.body); // { userId: 2, name: henix }
+  res.setHeader('Content-Type', 'text/plain');
+  res.cookie('cart', { username: 'henix' }, { maxAge: 90000 });
+  res.format({
+    'text/plain': () => {
+      res.send('hey');
+    }, // 如果req的头设置成*/*，则text/plain会被匹配
+    'text/html': () => {
+      res.send('<p>hey</p>');
+    },
+    'application/json': () => {
+      res.send({ message: 'hey' });
+    },
+    default: () => {
+      res.status(406).send('客户端希望接受到的内容类型，服务端不懂哦。'); // 自定义的406状态，如果没有default也会返回406状态的响应
+    }
+  });
+  // return next();
 });
 
 export default router;

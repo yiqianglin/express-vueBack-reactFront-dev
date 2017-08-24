@@ -20,12 +20,12 @@ export default class ProductDetailsTop extends Component {
               renderData.createSource === 1
                 ? <span className="product-value">{formatMoney(renderData.spendScore, 0)}欢乐豆兑换</span>
                 : renderData.createSource === 2
-                    ? <span className="product-value">抽奖获得</span>
-                    : renderData.createSource === 3
-                        ? <span className="product-value">首充赠送</span>
-                        : renderData.createSource === 4
-                            ? <span className="product-value">充值赠送</span>
-                            : null
+                  ? <span className="product-value">抽奖获得</span>
+                  : renderData.createSource === 3
+                    ? <span className="product-value">首充赠送</span>
+                    : renderData.createSource === 4
+                      ? <span className="product-value">充值赠送</span>
+                      : null
             }
           </div>
         </div>

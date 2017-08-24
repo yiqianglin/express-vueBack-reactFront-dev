@@ -3,7 +3,7 @@
 
 import express from 'express';
 
-var router = express.Router();
+const router = express.Router();
 
 // 例子一
 // 访问http://localhost:3000/demo/demo2/id_04
@@ -34,20 +34,20 @@ var router = express.Router();
 // /id_04/page_01
 // and this matches too
 
-router.param(['id', 'page'], function(req, res, next, value) {
-    console.log('demo2, router.param只被执行一次', value);
-    next();
+router.param(['id', 'page'], (req, res, next, value) => {
+  console.log('demo2, router.param只被执行一次', value);
+  next();
 });
-router.get('/user/:id/:page', function(req, res, next) {
-    console.log('although this matches');
-    console.log(req.originalUrl);	
-    console.log(req.baseUrl);
-    console.log(req.path);
-    next();
+router.get('/user/:id/:page', (req, res, next) => {
+  console.log('although this matches');
+  console.log(req.originalUrl);
+  console.log(req.baseUrl);
+  console.log(req.path);
+  next();
 });
-router.get('/user/:id/:page', function (req, res, next) {
-    console.log('and this matches too');
-    res.end();
+router.get('/user/:id/:page', (req, res, next) => {
+  console.log('and this matches too');
+  res.end();
 });
 
 export default router;

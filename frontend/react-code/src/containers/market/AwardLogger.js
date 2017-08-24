@@ -155,20 +155,20 @@ export default class AwardLogger extends Component {
               </span>
               {
                 obj.createSource === 1
-                ? <span className="got-way">
-                    消耗
+                  ? <span className="got-way">
+                      消耗
                     <span className="product-value">
                       {formatMoney(obj.spendScore, 0)}
                     </span>
                     欢乐豆
                   </span>
-                : obj.createSource === 2
+                  : obj.createSource === 2
                     ? <span className="got-way">抽奖获得</span>
                     : obj.createSource === 3
-                        ? <span className="got-way">首充赠送</span>
-                        : obj.createSource === 4
-                            ? <span className="got-way">充值赠送</span>
-                            : null
+                      ? <span className="got-way">首充赠送</span>
+                      : obj.createSource === 4
+                        ? <span className="got-way">充值赠送</span>
+                        : null
               }
             </div>
             <div className="logger-right"><span className="arrow-right" /></div>
@@ -192,30 +192,30 @@ export default class AwardLogger extends Component {
           {isEmpty
             ? <IsEmpty />
             : <div className="award-logger-con">
-                <ListView
-                  ref="lv"
-                  dataSource={this.state.dataSource}
-                  renderRow={row}
-                  renderFooter={() => {
-                    return (
-                      <div style={{ textAlign: 'center' }}>
-                        {isLoading
-                          ? '加载中...'
-                          : isLastPage ? '已经是最后一页了' : '下拉继续加载'}
-                      </div>
-                    );
-                  }}
-                  pageSize={pageSize}
-                  scrollEventThrottle={10}
-                  onScroll={() => {}}
-                  onEndReached={this.onEndReached}
-                  onEndReachedThreshold={10}
-                >
-                  {isLastPage ? <LastPageBottomRemark /> : null}
-                  {isLastPage ? <QQqunBottomRemark /> : null}
-                </ListView>
+              <ListView
+                ref="lv"
+                dataSource={this.state.dataSource}
+                renderRow={row}
+                renderFooter={() => {
+                  return (
+                    <div style={{ textAlign: 'center' }}>
+                      {isLoading
+                        ? '加载中...'
+                        : isLastPage ? '已经是最后一页了' : '下拉继续加载'}
+                    </div>
+                  );
+                }}
+                pageSize={pageSize}
+                scrollEventThrottle={10}
+                onScroll={() => {}}
+                onEndReached={this.onEndReached}
+                onEndReachedThreshold={10}
+              >
+                {isLastPage ? <LastPageBottomRemark /> : null}
+                {isLastPage ? <QQqunBottomRemark /> : null}
+              </ListView>
 
-              </div>}
+            </div>}
         </div>
       </div>
     );

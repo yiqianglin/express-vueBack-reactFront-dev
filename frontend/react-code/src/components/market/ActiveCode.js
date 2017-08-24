@@ -25,34 +25,34 @@ class ActiveCodeCon extends React.Component {
     const couponTypeJudge = judgeCouponType(couponCode);
     return (
       <div>
-      {
-        couponCode ?
-          <div>
-          {
-            couponTypeJudge === 'simple' ?
-            <div className="redeem-code-wrapper-simple">
-              <p className="title">奖品兑换码/激活码</p>
-                <p className="redeem-code">{couponCode}</p>
+        {
+          couponCode ?
+            <div>
+              {
+                couponTypeJudge === 'simple' ?
+                  <div className="redeem-code-wrapper-simple">
+                    <p className="title">奖品兑换码/激活码</p>
+                    <p className="redeem-code">{couponCode}</p>
+                  </div>
+                  :
+                  <div className="redeem-code-wrapper-double">
+                    <ul>
+                      <li>
+                        <span className="label">奖品卡号</span><span className="details cardId">{getSeparateCoupon(couponCode).id}</span>
+                      </li>
+                      <li>
+                        <span className="label">奖品卡密</span><span className="details cardKey">{getSeparateCoupon(couponCode).key}</span>
+                      </li>
+                    </ul>
+                  </div>
+              }
             </div>
             :
-            <div className="redeem-code-wrapper-double">
-              <ul>
-                <li>
-                  <span className="label">奖品卡号</span><span className="details cardId">{getSeparateCoupon(couponCode).id}</span>
-                </li>
-                <li>
-                  <span className="label">奖品卡密</span><span className="details cardKey">{getSeparateCoupon(couponCode).key}</span>
-                </li>
-              </ul>
+            <div className="redeem-code-wrapper-simple">
+              <p className="title">奖品兑换码/激活码</p>
+              <p className="redeem-code-default">下一工作日24点前生成</p>
             </div>
-          }
-          </div>
-          :
-          <div className="redeem-code-wrapper-simple">
-            <p className="title">奖品兑换码/激活码</p>
-            <p className="redeem-code-default">下一工作日24点前生成</p>
-          </div>
-      }
+        }
       </div>
     );
   }
