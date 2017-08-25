@@ -9,6 +9,7 @@ import { jsonWrite, pageWrite } from '../utils/returnGenerator';
 const productSQLMapping = {
   queryAll: 'SELECT * FROM `product`',
   queryById: 'SELECT * FROM `product` WHERE `productId` = ?',
+  queryByName: 'SELECT * FROM `product` WHERE `productName` = ?',
   addProduct: 'INSERT INTO `game`.`product` (`productName`, `needScore`, `stock`) VALUES (?, ?, ?);'
 }
 
@@ -62,6 +63,27 @@ export default {
           未找到需要修改的数据： affectedRows：0, changedRows:0
         * */
         jsonWrite(res, dbResult);
+        connection.release();
+      });
+    });
+  },
+  // 插入不重复的商品名
+  addProductUnique(req, res, callback, next) {
+    const { productName, needScore, stock } = req;
+    pool.getConnection((error, connection) => {
+      connection.query(productSQLMapping.queryByName, productName, (err, dbResult) => {
+        if (dbResult.length) {
+          console.log('重复了');
+          const resResult = {
+            code: '200',
+            msg: '商品名不能重复，请核对后再录入',
+            result: JSON.stringify(dbResult[0])
+          };
+          jsonWrite(res, resResult);
+        } else {
+          console.log('没有重复');
+          this.addProduct(req, res, null, next);
+        }
         connection.release();
       });
     });

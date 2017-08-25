@@ -15,7 +15,7 @@ router.all('/showProductById', (req, res, next) => {
 });
 
 router.all('/addProduct', (req, res, next) => {
-  productAction.addProduct({ productName: '名字很奇怪', needScore: 10000, stock: 20 }, res, null, next);
+  productAction.addProductUnique({ productName: '名字很奇怪3', needScore: 10000, stock: 20 }, res, null, next);
 });
 
 export default router;
