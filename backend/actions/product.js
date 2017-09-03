@@ -67,7 +67,7 @@ export default {
       });
     });
   },
-  // 插入不重复的商品名
+  // 插入不重复的商品名，简单callback方式
   addProductUnique(req, res, callback, next) {
     const { productName, needScore, stock } = req;
     pool.getConnection((error, connection) => {
@@ -87,5 +87,87 @@ export default {
         connection.release();
       });
     });
-  }
+  },
+  // 插入不重复的商品名，promise方式
+  addProductUnique2(req, res, callback, next){
+    const { productName, needScore, stock } = req;
+    var poolGetConnection = new Promise((resolve, reject) => {
+      pool.getConnection((err, _connection) => {
+        if (err) {
+          return reject(err)
+        }
+        return resolve({_connection});
+      });
+    });
+    var queryByName = (_connection, result) => {
+      return new Promise((resolve, reject) => {
+        _connection.query(productSQLMapping.queryByName, productName, (err, dbResult) => {
+          if (dbResult.length) {
+            console.log('重复了');
+            const resResult = {
+              code: '200',
+              msg: '商品名不能重复，请核对后再录入',
+              result: JSON.stringify(dbResult[0])
+            };
+            return reject({_connection, resResult});
+          } else {
+            console.log(dbResult.length);
+            return resolve({_connection, dbResult});
+          }
+        })
+      });
+    };
+    var addProductByName = (_connection, result) => {
+      return new Promise((resolve, reject) => {
+        _connection.query(productSQLMapping.addProduct, [productName, needScore, stock], (err, dbResult) => {
+          console.log('插入', dbResult.affectedRows);
+          if (dbResult.affectedRows) {
+            console.log(dbResult);
+            return resolve({_connection, dbResult});
+          }
+          return reject(err);
+          connection.release();
+        });
+      });
+    };
+    poolGetConnection
+    .then(data => queryByName(data._connection))
+    .then(data => addProductByName(data._connection))
+    .then(data => {
+      console.log('最后的结果：', data.dbResult);
+      jsonWrite(res, data.dbResult);
+    })
+    .catch(err => {jsonWrite(res, {msg: 'promise reject了'})})
+  },
+  // 插入不重复的商品名，async、await方式
+  // 不考虑并发的问题，因为查询=》插入式继发的操作，所以用async不用考虑并发写法
+  addProductUnique3(req, res, callback, next) {
+    async function poolGetConnection(){
+      const result = await pool.getConnection((err, _connection) => {
+        if (err) {
+          return Promise.reject(err);
+        }
+        return Promise.resolve({_connection});
+      });
+    };
+
+    async function queryByName({_connection, result}){
+      const result = await _connection.query(productSQLMapping.queryByName, productName, (err, dbResult) => {
+        if (dbResult.length) {
+          console.log('重复了');
+          const resResult = {
+            code: '200',
+            msg: '商品名不能重复，请核对后再录入',
+            result: JSON.stringify(dbResult[0])
+          };
+          return Promise.reject(_connection, resResult);
+        } else {
+          console.log(dbResult.length);
+          return Promise.resolve({_connection, dbResult});
+        }
+      })
+    };
+
+    
+  })
 };
