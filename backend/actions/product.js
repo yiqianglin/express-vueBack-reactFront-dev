@@ -139,12 +139,24 @@ export default {
     })
     .catch(err => {jsonWrite(res, {msg: 'promise reject了'})})
   },
+
+
+
+
+
+
+
+
+
+
+
   // 插入不重复的商品名，async、await方式
   // 不考虑并发的问题，因为查询=》插入式继发的操作，所以用async不用考虑并发写法
   addProductUnique3(req, res, callback, next) {
     const { productName, needScore, stock } = req;
+
     async function poolGetConnection(){
-      const _result = await new Promise((resolve, reject) => {
+      return await new Promise((resolve, reject) => {
         pool.getConnection((err, _connection) => {
           if (err) {
             const errorData = {
@@ -156,14 +168,11 @@ export default {
           const data = {_connection};
           return resolve(data);
         });
-        // console.log('22222');
       });
-      // console.log('33333');
-      return _result;
     };
 
     async function queryByName({_connection, result}){
-      const _result = await new Promise((resolve, reject) => {
+      return await new Promise((resolve, reject) => {
         _connection.query(productSQLMapping.queryByName, productName, (err, dbResult) => {
           if (dbResult.length) {
             console.log('重复了');
@@ -177,42 +186,40 @@ export default {
             return resolve({_connection, dbResult});
           }
         });
-        // console.log('55555')
       });
-      // console.log('66666')
-      return _result;
     };
 
     async function addProductByName({_connection, result}){
-      const _result = await new Promise((resolve, reject) => {
+      return await new Promise((resolve, reject) => {
         console.log('插入商品');
         _connection.query(productSQLMapping.addProduct, [productName, needScore, stock], (err, dbResult) => {
           if (dbResult && dbResult.affectedRows) {
             console.log(dbResult.affectedRows);
             console.log('居然resolve了？');
             return resolve({_connection, dbResult});
+          } else {
+            console.log('居然reject了？');
+            return reject({err});            
           }
-          console.log(err);
-          console.log('居然reject了？');
-          return reject(err);
           connection.release();
         });
       });
-      return _result;
     };
+
+
     poolGetConnection()
-    .then(data => queryByName(data))
     .then(data => {
+      console.log('查看商品是否存在', data);
+      queryByName(data)
+    })
+    .then(data => {
+      console.log('调用增加商品方法', data);
       addProductByName(data);
     })
-    // .then(data => {
-    //   console.log('应该不会进来吧');
-    //   jsonWrite(res, data.dbResult);
-    // })
     .catch(err => {
       console.log('catch', err);
-      jsonWrite(res, {code: '500', msg: '出错了'})
+      jsonWrite(res, {code: '500', msg: 'chsdfksdjfkj'})
     });
-    // poolGetConnection().then((data) => {console.log('then', data);queryByName(data._connection)});
+
   }
 };
