@@ -5,7 +5,12 @@ Vue.use(Router)
 
 const login = r => require.ensure([], () => r(require('@/page/login')), 'login');
 const manage = r => require.ensure([], () => r(require('@/page/manage')), 'manage');
-const home = r => require.ensure([], () => r(require('@/page/home')), 'home');
+// const home = r => require.ensure([], () => r(require('@/page/home')), 'home');
+const home = (resolve, reject) => {
+	require.ensure([], () => {
+		resolve(require('@/page/home'))
+	}, 'home');
+};
 const addShop = r => require.ensure([], () => r(require('@/page/addShop')), 'addShop');
 const addGoods = r => require.ensure([], () => r(require('@/page/addGoods')), 'addGoods');
 const userList = r => require.ensure([], () => r(require('@/page/userList')), 'userList');
@@ -20,6 +25,7 @@ const vueEdit = r => require.ensure([], () => r(require('@/page/vueEdit')), 'vue
 const adminSet = r => require.ensure([], () => r(require('@/page/adminSet')), 'adminSet');
 const sendMessage = r => require.ensure([], () => r(require('@/page/sendMessage')), 'sendMessage');
 const explain = r => require.ensure([], () => r(require('@/page/explain')), 'explain');
+const mypage = r => require.ensure([], () => r(require('@/page/mypage')), 'mypage');
 
 const routes = [
 	{
@@ -90,6 +96,10 @@ const routes = [
 			path: '/explain',
 			component: explain,
 			meta: ['说明', '说明'],
+		},{
+			path: '/mypage',
+			component: mypage,
+			meta: ['测试', '测试'],
 		}]
 	}
 ]

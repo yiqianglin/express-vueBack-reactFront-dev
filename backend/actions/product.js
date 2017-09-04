@@ -142,32 +142,77 @@ export default {
   // 插入不重复的商品名，async、await方式
   // 不考虑并发的问题，因为查询=》插入式继发的操作，所以用async不用考虑并发写法
   addProductUnique3(req, res, callback, next) {
+    const { productName, needScore, stock } = req;
     async function poolGetConnection(){
-      const result = await pool.getConnection((err, _connection) => {
-        if (err) {
-          return Promise.reject(err);
-        }
-        return Promise.resolve({_connection});
+      const _result = await new Promise((resolve, reject) => {
+        pool.getConnection((err, _connection) => {
+          if (err) {
+            const errorData = {
+              error,
+              msg: '连接数据库失败'
+            };
+            return reject(errorData);
+          }
+          const data = {_connection};
+          return resolve(data);
+        });
+        // console.log('22222');
       });
+      // console.log('33333');
+      return _result;
     };
 
     async function queryByName({_connection, result}){
-      const result = await _connection.query(productSQLMapping.queryByName, productName, (err, dbResult) => {
-        if (dbResult.length) {
-          console.log('重复了');
-          const resResult = {
-            code: '200',
-            msg: '商品名不能重复，请核对后再录入',
-            result: JSON.stringify(dbResult[0])
-          };
-          return Promise.reject(_connection, resResult);
-        } else {
-          console.log(dbResult.length);
-          return Promise.resolve({_connection, dbResult});
-        }
-      })
+      const _result = await new Promise((resolve, reject) => {
+        _connection.query(productSQLMapping.queryByName, productName, (err, dbResult) => {
+          if (dbResult.length) {
+            console.log('重复了');
+            const resResult = {
+              code: '200',
+              msg: '商品名不能重复，请核对后再录入',
+              result: JSON.stringify(dbResult[0])
+            };
+            return resolve({_connection, resResult});
+          } else {
+            return resolve({_connection, dbResult});
+          }
+        });
+        // console.log('55555')
+      });
+      // console.log('66666')
+      return _result;
     };
 
-    
-  })
+    async function addProductByName({_connection, result}){
+      const _result = await new Promise((resolve, reject) => {
+        console.log('插入商品');
+        _connection.query(productSQLMapping.addProduct, [productName, needScore, stock], (err, dbResult) => {
+          if (dbResult && dbResult.affectedRows) {
+            console.log(dbResult.affectedRows);
+            console.log('居然resolve了？');
+            return resolve({_connection, dbResult});
+          }
+          console.log(err);
+          console.log('居然reject了？');
+          return reject(err);
+          connection.release();
+        });
+      });
+      return _result;
+    };
+    poolGetConnection()
+    .then(data => queryByName(data))
+    .then(data => {
+      addProductByName(data);
+    })
+    // .then(data => {
+    //   console.log('应该不会进来吧');
+    //   jsonWrite(res, data.dbResult);
+    // })
+    .catch(err => {
+      console.log('catch', err);
+      jsonWrite(res, {code: '500', msg: '出错了'})
+    });
+    // poolGetConnection().then((data) => {console.log('then', data);queryByName(data._connection)});
+  }
 };
