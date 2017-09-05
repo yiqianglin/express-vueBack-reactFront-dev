@@ -142,14 +142,6 @@ export default {
 
 
 
-
-
-
-
-
-
-
-
   // 插入不重复的商品名，async、await方式
   // 不考虑并发的问题，因为查询=》插入式继发的操作，所以用async不用考虑并发写法
   addProductUnique3(req, res, callback, next) {
@@ -181,7 +173,7 @@ export default {
               msg: '商品名不能重复，请核对后再录入',
               result: JSON.stringify(dbResult[0])
             };
-            return resolve({_connection, resResult});
+            return reject({_connection, resResult});
           } else {
             return resolve({_connection, dbResult});
           }
@@ -210,11 +202,11 @@ export default {
     poolGetConnection()
     .then(data => {
       console.log('查看商品是否存在', data);
-      queryByName(data)
+      return queryByName(data)
     })
     .then(data => {
       console.log('调用增加商品方法', data);
-      addProductByName(data);
+      return addProductByName(data);
     })
     .catch(err => {
       console.log('catch', err);
