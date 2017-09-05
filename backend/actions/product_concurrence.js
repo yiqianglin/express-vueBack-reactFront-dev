@@ -42,7 +42,7 @@ export default {
     const changeStock1 = function() {
       return new Promise((resolve, reject) => {
         pool.getConnection((error, connection) => {
-          connection.query(productSQLMapping.changeStock1, [20, "名字很奇怪1"], (err, dbResult) => {
+          connection.query(productSQLMapping.changeStock1, [21, "名字很奇怪3"], (err, dbResult) => {
             const resResult = {};
             if (error) {
               resResult.code = '500';
@@ -64,11 +64,10 @@ export default {
       });
     }
 
-
     const changeStock2 = function() {
       return new Promise((resolve, reject) => {
         pool.getConnection((error, connection) => {
-          connection.query(productSQLMapping.changeStock2, [22, "名字很奇怪2"], (err, dbResult) => {
+          connection.query(productSQLMapping.changeStock2, [22, "名字很奇怪4"], (err, dbResult) => {
             const resResult = {};
             if (error) {
               resResult.code = '500';
@@ -88,17 +87,16 @@ export default {
           });
         });
       });
-    }
+    };
 
-
-    changeStock1()
-    .then(data => {
-      console.log('then_1', data);
-      return changeStock2(data)
+    Promise.all([
+      changeStock1(),
+      changeStock2()
+    ])
+    .then((result1, result2) => {
+      console.log('result1', result1);
+      console.log('result2', result2);
     })
-    .then(data => {
-      console.log('then_2', data);
-    })
-    .catch(err => console.log(err));
+    .catch((err) => console.log(err))
   },
 };
