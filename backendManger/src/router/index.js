@@ -5,6 +5,7 @@ Vue.use(Router)
 
 const login = r => require.ensure([], () => r(require('@/page/login')), 'login');
 const manage = r => require.ensure([], () => r(require('@/page/manage')), 'manage');
+const productList = r => require.ensure([], () => r(require('@/page/productList')), 'productList');
 const home = (resolve, reject) => {
 	require.ensure([], () => {
 		resolve(require('@/page/home'))
@@ -24,6 +25,10 @@ const routes = [
 			path: '',
 			component: home,
 			meta: [],
+		}, {
+			path: '/productList',
+			component: productList,
+			meta: ['商品列表'],
 		}]
 	}
 ]

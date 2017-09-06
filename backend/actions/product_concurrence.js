@@ -93,10 +93,39 @@ export default {
       changeStock1(),
       changeStock2()
     ])
-    .then((result1, result2) => {
+    .then(([result1, result2]) => {
       console.log('result1', result1);
       console.log('result2', result2);
     })
     .catch((err) => console.log(err))
   },
+
+  // async方法
+  changeStockAsync(req, res, callback, next) {
+    const { productName, needScore, stock } = req;
+    async.parallel({
+      one: function(cb){
+        pool.getConnection((error, connection) => {
+          connection.query(productSQLMapping.changeStock2, [22, "名字很奇怪1"], (err, dbResult) => {
+            cb(null, dbResult);
+            connection.release();
+          });
+        });
+      },
+      two: function(cb){
+        pool.getConnection((error, connection) => {
+          connection.query(productSQLMapping.changeStock2, [22, "名字很奇怪2"], (err, dbResult) => {
+            cb(null, dbResult);
+            connection.release();
+          });
+        });
+      }
+    }, function(err, results){
+      if (err){
+        console.log('err', err);
+      } else {
+        console.log('results', results);
+      }
+    });
+  }
 };
