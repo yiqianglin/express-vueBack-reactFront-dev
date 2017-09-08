@@ -64,7 +64,7 @@
 
 <script>
 	import headTop from '../components/headTop';
-	import { post } from '../utils/utilsFunc';
+	import { post } from '@/utils/utilsFunc';
 	export default {
 		data(){
 			return {
@@ -111,7 +111,7 @@
 		},
 		methods: {
 			initData(){
-				post('product/showAll1', null);
+				post('product/showAll', null);
 			}
 		}
 	}
