@@ -1,10 +1,8 @@
-import axios from 'axios';
+﻿import axios from 'axios';
 import qs from 'qs';
 
 
-// 添加一个请求拦截器
 axios.interceptors.request.use(config => {
-	//在请求发送之前做一些事
 	return config;
 }, error => {
     return Promise.reject(error);
@@ -32,17 +30,26 @@ export class ApiError extends Error{
 }
 
 function checkStatus(response) {
-  console.log(response)
-  if (response && (response.status === 200 || response.status === 304 || response.status === 400)) {
-    return Promise.resolve(response);
+  console.log(response);
+  if(response) {
+    if(response.status === 200 || response.status === 304 || response.status === 400) {
+      return Promise.resolve(response);
+    } else {
+      return Promise.reject(
+        new ApiError({
+          data: response.data,
+          status: response.status,
+          message: '访问错误'
+        })
+      );
+    }
   }
+  console.log("!!!!!!!!!!!!!!!!!!!!!!!");
   return Promise.reject(
     new ApiError({
-      data: response.data,
-      status: response.status,
       message: '访问错误'
     })
-  );
+  )
 }
 
 
@@ -82,12 +89,14 @@ export function post(url, data){
       timeout: 10000,
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-      }
+      },
+      responseType: 'json'
     }).then(
-      (response) => {
+      response => {
         console.log('resolve response', response);
         return checkStatus(response);
-      }, (response) => {
+      },
+      response => {
         console.log('reject response', response);
         return Promise.reject(
           new ApiError({
@@ -99,7 +108,7 @@ export function post(url, data){
       }
     ).catch(
       (err) => {
-        console.log(err.msg, err.status, err.data);
+        console.log(err.message, err.status, err.data);
         return Promise.reject(err);
       }
     )

@@ -7,7 +7,7 @@
 	    <el-table-column type="expand">
 	      <template scope="props">
 	        <el-form label-position="left" inline class="demo-table-expand">
-				<el-form-item label="商品ID">
+				<el-form-item label="商品ID" width=50>
 					<span>{{ props.row.productId }}</span>
 				</el-form-item>
 				<el-form-item label="商品名称">
@@ -53,12 +53,49 @@
         v-for="col in cols"
         :prop="col.prop" :label="col.label" >
       </el-table-column>
-	    <el-table-column label="商品图片预览" label-class-name="center" class-name="center">
-	    	<template scope="scope">
+
+		<el-table-column label="商品图片预览" label-class-name="center" class-name="center">
+			<template scope="scope">
 				<img class="product-pic-td" v-bind:src="scope.row.productPic" alt="">
-	    	</template>
+			</template>
+		</el-table-column>
+		<el-table-column
+	      label="操作"
+	      width="100">
+	      <template scope="scope">
+	        <el-button @click="handleEdit(scope.row)" type="text" size="small">查看</el-button>
+	        <el-button type="text" size="small">删除</el-button>
+	      </template>
 	    </el-table-column>
 	  </el-table>
+		
+		<el-dialog title="修改食品信息" v-model="editDialogIsShow">
+		<el-form :model="selectProduct">
+            <el-form-item label="食品名称" label-width="100px">
+                    <el-input v-model="selectProduct.name" auto-complete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="食品介绍" label-width="100px">
+                    <el-input v-model="selectProduct.description"></el-input>
+                </el-form-item>
+                <el-form-item label="食品图片" label-width="100px">
+                    <el-upload
+                      drag
+                      class="avatar-uploader"
+                      :action="'/v1/addimg/food'"
+                      :show-file-list="false"
+                      :on-success="handleServiceAvatarScucess"
+                      :before-upload="beforeAvatarUpload">
+                      <img v-if="selectProduct.image_path" :src="baseImgPath + selectProduct.image_path" class="avatar">
+                      <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+                    </el-upload>
+                </el-form-item>
+            </el-form>
+		</el-dialog>
+
+
+
+
+
 	</div>
 </template>
 
@@ -68,42 +105,17 @@
 	export default {
 		data(){
 			return {
-				tableData: [{
-			    productId: '1',
-			    productName: 'iphone 7中国红32G',
-			    productDesc: '没什么好说的，就是一部手机。',
-			    needScore: 10000000,
-			    stock: 5,
-			    createTime: '2017-08-22 16:38:36',
-			    updateTime: '2017-08-22 18:02:44',
-			    productPic: 'http://ov2y8mbyy.bkt.clouddn.com/icon-iphone7.png'
-			  }, {
-			    productId: '1',
-			    productName: 'iphone 7中国红32G',
-			    productDesc: '没什么好说的，就是一部手机。',
-			    needScore: 10000000,
-			    stock: 5,
-			    createTime: '2017-08-22 16:38:36',
-			    updateTime: '2017-08-22 18:02:44',
-			    productPic: 'http://ov2y8mbyy.bkt.clouddn.com/icon-iphone7.png'
-			  }, {
-			    productId: '1',
-			    productName: 'iphone 7中国红32G',
-			    productDesc: '没什么好说的，就是一部手机。',
-			    needScore: 10000000,
-			    stock: 5,
-			    createTime: '2017-08-22 16:38:36',
-			    updateTime: '2017-08-22 18:02:44',
-			    productPic: 'http://ov2y8mbyy.bkt.clouddn.com/icon-iphone7.png'
-			  }],
-			  cols: [
-			  	{ label: '商品ID', prop: 'productId'},
-			  	{ label: '商品名称', prop: 'productName'},
-			  	{ label: '商品描述', prop: 'productDesc'},
-			  	{ label: '所需积分', prop: 'needScore'},
-			  	{ label: '库存', prop: 'stock'},
-			  	{ label: '商品图片', prop: 'productPic'}
-			  ]
+				tableData: null,
+				cols: [
+					{ label: '商品ID', prop: 'productId'},
+					{ label: '商品名称', prop: 'productName'},
+					{ label: '商品描述', prop: 'productDesc'},
+					{ label: '所需积分', prop: 'needScore'},
+					{ label: '库存', prop: 'stock'},
+					// { label: '商品图片', prop: 'productPic'}
+				],
+				editDialogIsShow: false,
+				selectProduct: {},
 			}
 		},
 		mounted(){
@@ -111,7 +123,13 @@
 		},
 		methods: {
 			initData(){
-				post('product/showAll', null);
+				post('product/showAll', null)
+				.then(response => {
+					this.tableData = JSON.parse(response.data.result);
+				})
+			},
+			handleEdit(row){
+				console.log(row)
 			}
 		}
 	}

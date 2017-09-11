@@ -30,6 +30,10 @@ export const getCarDBSession = ({ commit }, params) => {
     })
 }
 
-export const changeStock = () => {
-  
+export async function changeStock(){
+  const url = 'product/showAll'
+  const sucCommit = 'CHANGE_STOCK_SUCCESS'
+  const failCommit = 'CHANGE_STOCK_FAIL'
+
+
 }
