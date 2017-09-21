@@ -79,21 +79,22 @@
                     <el-input v-model="selectProduct.description"></el-input>
                 </el-form-item>
                 <el-form-item label="食品图片" label-width="100px">
-                    <el-upload
-					  class="upload-demo"
-					  drag
-					  action="http://upload.qiniu.com/"
-			        :show-file-list='uploadData.showUploadList'
-			        :on-progress="handleProgress"
-			        :on-success="handleSuccess"
-			        :on-error="handleError"
-			        :before-upload="beforeUpload"
-			        :data='uploadData.form'
-					  multiple>
-					  <i class="el-icon-upload"></i>
-					  <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
-					  <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
-					</el-upload>
+<el-upload
+  action="http://upload.qiniu.com/"
+  list-type="picture-card"
+	:show-file-list='false'
+	:on-progress="handleProgress"
+	:on-success="handleSuccess"
+	:on-error="handleError"
+	:before-upload="beforeUpload"
+	:data='uploadData.form'
+  :on-preview="handlePictureCardPreview"
+  :on-remove="handleRemove">
+  <i class="el-icon-plus"></i>
+</el-upload>
+<el-dialog v-model="uploadData.dialogVisible" size="tiny">
+  <img width="100%" :src="uploadData.dialogImageUrl" alt="">
+</el-dialog>
                 </el-form-item>
             </el-form>
 			<div slot="footer" class="dialog-footer">
@@ -135,7 +136,9 @@
 		            fileSize: '',
 		            loaded: '',
 		            percent: '',
-		            result: ''
+		            result: '',
+		            dialogImageUrl: '',
+        			dialogVisible: false
 				}
 			}
 		},
@@ -169,7 +172,15 @@
 	        },
 	        handleError (error, response, file) {
 	            this.uploadData.result = error.toString()
-	        }
+	        },
+		      handleRemove(file, fileList) {
+		        console.log(file, fileList);
+		      },
+		      handlePictureCardPreview(file) {
+		      	console.log(file.url);
+		        this.uploadData.dialogImageUrl = file.url;
+		        this.uploadData.dialogVisible = true;
+		      }
 		}
 	}
 </script>
