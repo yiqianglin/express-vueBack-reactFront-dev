@@ -82,7 +82,13 @@
                     <el-upload
 					  class="upload-demo"
 					  drag
-					  action="https://jsonplaceholder.typicode.com/posts/"
+					  action="http://upload.qiniu.com/"
+			        :show-file-list='uploadData.showUploadList'
+			        :on-progress="handleProgress"
+			        :on-success="handleSuccess"
+			        :on-error="handleError"
+			        :before-upload="beforeUpload"
+			        :data='uploadData.form'
 					  multiple>
 					  <i class="el-icon-upload"></i>
 					  <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
@@ -102,6 +108,9 @@
 <script>
 	import headTop from '../components/headTop';
 	import { post } from '@/utils/utilsFunc';
+	import qiniu from 'qiniu-js';
+	import config from '@/config/qiniuConfig';
+	console.log(config);
 	export default {
 		data(){
 			return {
@@ -116,6 +125,18 @@
 				],
 				editDialogIsShow: false,
 				selectProduct: {},
+				uploadData: {
+		            form: {
+		                token: config.uptoken,
+		                key: null
+		            },
+		            showUploadList: true,
+		            fileName: '',
+		            fileSize: '',
+		            loaded: '',
+		            percent: '',
+		            result: ''
+				}
 			}
 		},
 		mounted(){
@@ -131,7 +152,24 @@
 			handleEdit(row){
 				console.log(row);
 				this.editDialogIsShow = true;
-			}
+			},
+	        beforeUpload (file) {
+	            this.uploadData.fileName = file.name
+	            this.uploadData.form.key = file.name
+	            console.log(this.uploadData.form);
+	        },
+	        handleProgress (event, file, fileList) {
+	            this.uploadData.loaded = (event.loaded / 1000000).toFixed(2)
+	            this.uploadData.fileSize = (event.total / 1000000).toFixed(2)
+	            this.uploadData.percent = (event.loaded / event.total * 100).toFixed(2)
+	            console.log(this.uploadData.percent)
+	        },
+	        handleSuccess (response, file, fileList) {
+	            this.uploadData.result = '上传成功'
+	        },
+	        handleError (error, response, file) {
+	            this.uploadData.result = error.toString()
+	        }
 		}
 	}
 </script>

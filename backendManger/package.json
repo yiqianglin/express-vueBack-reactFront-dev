@@ -17,6 +17,10 @@
   "dependencies": {
     "echarts": "^3.5.4",
     "element-ui": "^1.2.9",
+    "fs": "^0.0.1-security",
+    "pause-stream": "^0.0.11",
+    "qiniu": "^6.1.13",
+    "qiniu-js": "^1.0.22",
     "qs": "^6.5.0",
     "time-formater": "^1.0.1",
     "vue": "^2.2.6",
