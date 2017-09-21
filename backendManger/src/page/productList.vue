@@ -69,9 +69,10 @@
 	    </el-table-column>
 	  </el-table>
 		
-		<el-dialog title="修改食品信息" v-model="editDialogIsShow">
-		<el-form :model="selectProduct">
-            <el-form-item label="食品名称" label-width="100px">
+		<el-dialog title="修改食品信息" v-model="editDialogIsShow" class="edit-dialog">
+			<span slot="title"><span class="slot_title">这是另一个title slot</span></span>
+			<el-form :model="selectProduct">
+            	<el-form-item label="食品名称" label-width="100px">
                     <el-input v-model="selectProduct.name" auto-complete="off"></el-input>
                 </el-form-item>
                 <el-form-item label="食品介绍" label-width="100px">
@@ -79,22 +80,21 @@
                 </el-form-item>
                 <el-form-item label="食品图片" label-width="100px">
                     <el-upload
-                      drag
-                      class="avatar-uploader"
-                      :action="'/v1/addimg/food'"
-                      :show-file-list="false"
-                      :on-success="handleServiceAvatarScucess"
-                      :before-upload="beforeAvatarUpload">
-                      <img v-if="selectProduct.image_path" :src="baseImgPath + selectProduct.image_path" class="avatar">
-                      <i v-else class="el-icon-plus avatar-uploader-icon"></i>
-                    </el-upload>
+					  class="upload-demo"
+					  drag
+					  action="https://jsonplaceholder.typicode.com/posts/"
+					  multiple>
+					  <i class="el-icon-upload"></i>
+					  <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
+					  <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
+					</el-upload>
                 </el-form-item>
             </el-form>
+			<div slot="footer" class="dialog-footer">
+				<el-button @click="editDialogIsShow = false">取 消</el-button>
+				<el-button type="primary" @click="">确 定</el-button>
+			</div>
 		</el-dialog>
-
-
-
-
 
 	</div>
 </template>
@@ -129,7 +129,8 @@
 				})
 			},
 			handleEdit(row){
-				console.log(row)
+				console.log(row);
+				this.editDialogIsShow = true;
 			}
 		}
 	}
@@ -160,6 +161,22 @@
 	  .center{
 	  	text-align: center;
 	  }
+  }
+
+  .edit-dialog{
+  	min-width: 900px;
+  }
+
+  .upload-demo{
+  	display: block;
+  	width: 100%;
+  	.el-upload{
+  		width: 100%;
+  		max-width: 600px;
+  	}
+  	.el-upload-dragger{
+  		width: 100%;
+  	}
   }
   
 </style>
