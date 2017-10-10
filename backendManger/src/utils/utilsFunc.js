@@ -30,7 +30,6 @@ export class ApiError extends Error{
 }
 
 function checkStatus(response) {
-  console.log(response);
   if(response) {
     if(response.status === 200 || response.status === 304 || response.status === 400) {
       return Promise.resolve(response);
@@ -80,7 +79,6 @@ function checkStatus(response) {
 // }
 
 export function post(url, data){
-    console.log('utils post');
     return axios({
       method: 'post',
       baseURL: 'http://localhost:3000/',
@@ -93,7 +91,6 @@ export function post(url, data){
       responseType: 'json'
     }).then(
       response => {
-        console.log('resolve response', response);
         return checkStatus(response);
       },
       response => {

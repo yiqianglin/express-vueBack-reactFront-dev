@@ -17,13 +17,4 @@ function create_uptoken(bucket_name) {
     return putPolicy.token();
 }
 
-console.log('uptoken =')
-console.log(config.uptoken)
-
-
-
-
-// export default db; 这样无法解构import
-// 
-// 
-export default config;
+export default create_uptoken;

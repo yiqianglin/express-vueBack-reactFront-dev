@@ -5,8 +5,8 @@ import ejs from 'ejs';
 import demo from './routes/demo/index';
 import demo1 from './routes/demo/demo1';
 import product from './routes/game/product';
-// 拉取配置，例如七牛token
 import configRoute from './routes/configRoute';
+// 拉取配置，例如七牛token
 
 const app = express();
 app.engine('.html', ejs.__express);
@@ -31,7 +31,7 @@ app.all('*', (req, res, next) => {
 app.use('/demo', demo);
 app.use('/demo1', demo1);
 app.use('/product', product);
-app.use('/config', configRoute);
+app.use('/configRoute', configRoute);
 
 app.use('*', (req, res) => {
   res.status(404).send('404 Not Found by Game Server Express');
